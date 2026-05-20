@@ -1,0 +1,7 @@
+2026-05-05 15:56:27,387 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-05-05 15:56:27,387 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-05-05 15:56:29,959 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 112244329
+2026-05-05 15:56:30,310 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-05-05 15:56:31,589 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 112244329
+2026-05-05 15:56:31,938 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-05-05 15:56:33,273 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 136324329

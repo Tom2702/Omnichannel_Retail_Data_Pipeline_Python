@@ -1,0 +1,65 @@
+2026-04-20 12:03:07,197 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-20 12:03:07,209 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 4)
+2026-04-20 12:03:07,209 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-20 12:03:07,210 | transformers.base_transformer | INFO | Shape: rows=2, columns=7
+2026-04-20 12:03:07,239 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 7 columns):
+ #   Column          Non-Null Count  Dtype         
+---  ------          --------------  -----         
+ 0   order_id        2 non-null      int64         
+ 1   transaction_id  2 non-null      str           
+ 2   created_at      2 non-null      datetime64[us]
+ 3   amount_vnd      2 non-null      int64         
+ 4   line_items      2 non-null      object        
+ 5   order_date_key  2 non-null      object        
+ 6   order_key       2 non-null      str           
+dtypes: datetime64[us](1), int64(2), object(2), str(2)
+memory usage: 252.0+ bytes
+
+2026-04-20 12:03:07,242 | transformers.base_transformer | INFO | No NULL values found.
+2026-04-20 12:03:07,245 | transformers.base_transformer | WARNING | Found 1 duplicate rows.
+2026-04-20 12:03:07,247 | transformers.base_transformer | INFO | Removed 1 duplicate rows.
+2026-04-20 12:03:07,249 | transformers.base_transformer | INFO | --- Date Range Validation ---
+2026-04-20 12:03:07,251 | transformers.base_transformer | INFO | Column 'created_at' - Date Range: 2026-04-01 00:00:00 to 2026-04-01 00:00:00
+2026-04-20 12:03:07,252 | transformers.base_transformer | INFO | --- Amount Validation ---
+2026-04-20 12:03:07,257 | transformers.base_transformer | INFO | Column 'amount_vnd' - Statistical Summary:
+2026-04-20 12:03:07,257 | transformers.base_transformer | INFO | Mean: 100000.00
+2026-04-20 12:03:07,257 | transformers.base_transformer | INFO | Median: 100000.00
+2026-04-20 12:03:07,257 | transformers.base_transformer | INFO | Std Dev: 0.00
+2026-04-20 12:03:07,257 | transformers.base_transformer | INFO | Min: 100000.00
+2026-04-20 12:03:07,257 | transformers.base_transformer | INFO | Max: 100000.00
+2026-04-20 12:03:07,257 | transformers.base_transformer | INFO | Column 'amount_vnd' has no significant outliers.
+2026-04-20 14:38:54,536 | transformers.base_transformer | WARNING | Column 'phone' missing. Added with null default.
+2026-04-20 14:38:54,537 | transformers.base_transformer | WARNING | Column 'city' missing. Added with null default.
+2026-04-20 14:38:54,538 | transformers.base_transformer | WARNING | Column 'country' missing. Added with null default.
+2026-04-20 14:38:54,539 | transformers.base_transformer | WARNING | Column 'customer_segment' missing. Added with null default.
+2026-04-20 14:38:54,539 | transformers.base_transformer | WARNING | Column 'lifetime_value_vnd' missing. Added with null default.
+2026-04-20 14:38:54,540 | transformers.base_transformer | WARNING | Column 'total_orders' missing. Added with null default.
+2026-04-20 14:38:54,540 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-20 14:38:54,541 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-20 14:38:54,584 | transformers.base_transformer | WARNING | Column 'barcode' missing. Added with null default.
+2026-04-20 14:38:54,585 | transformers.base_transformer | WARNING | Column 'category' missing. Added with null default.
+2026-04-20 14:38:54,585 | transformers.base_transformer | WARNING | Column 'brand' missing. Added with null default.
+2026-04-20 14:38:54,585 | transformers.base_transformer | WARNING | Column 'price_usd' missing. Added with null default.
+2026-04-20 14:38:54,586 | transformers.base_transformer | WARNING | Column 'is_active' missing. Added with null default.
+2026-04-20 16:11:25,670 | transformers.base_transformer | WARNING | Column 'customer_id' missing. Added with null default.
+2026-04-20 16:11:25,672 | transformers.base_transformer | WARNING | Column 'email' missing. Added with null default.
+2026-04-20 16:11:25,673 | transformers.base_transformer | WARNING | Column 'full_name' missing. Added with null default.
+2026-04-20 16:11:25,673 | transformers.base_transformer | WARNING | Column 'phone' missing. Added with null default.
+2026-04-20 16:11:25,674 | transformers.base_transformer | WARNING | Column 'city' missing. Added with null default.
+2026-04-20 16:11:25,674 | transformers.base_transformer | WARNING | Column 'country' missing. Added with null default.
+2026-04-20 16:11:25,675 | transformers.base_transformer | WARNING | Column 'created_at' missing. Added with null default.
+2026-04-20 16:11:25,675 | transformers.base_transformer | WARNING | Column 'customer_segment' missing. Added with null default.
+2026-04-20 16:11:25,675 | transformers.base_transformer | WARNING | Column 'lifetime_value_vnd' missing. Added with null default.
+2026-04-20 16:11:25,676 | transformers.base_transformer | WARNING | Column 'total_orders' missing. Added with null default.
+2026-04-20 16:11:25,676 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-20 16:11:25,676 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-20 16:18:57,164 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-20 16:18:57,177 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-20 16:18:57,179 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 7)
+2026-04-20 16:18:57,191 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-20 16:18:57,212 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-20 16:18:57,228 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-20 16:18:57,244 | transformers.base_transformer | INFO | Successfully created surrogate key 'transaction_key'.

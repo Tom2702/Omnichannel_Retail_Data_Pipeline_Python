@@ -1,0 +1,258 @@
+2026-04-23 15:42:43,489 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-23 15:42:45,066 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 15:42:46,295 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 15:42:47,701 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 15:42:49,149 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 15:42:50,710 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 15:42:52,124 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 15:42:53,426 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 15:42:53,426 | orchestration.pipeline_orchestrator | INFO | Starting pipeline orchestration for bucket 'tuan27' and dataset 'Ancestry'.
+2026-04-23 15:42:53,426 | orchestration.pipeline_orchestrator | INFO | Starting step: extract source data
+2026-04-23 15:42:53,674 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-23 15:42:53,674 | extractors.base_extractor | WARNING | No customer batch naming pattern matched under 'shared/customers/'. Falling back to all JSON files.
+2026-04-23 15:42:53,906 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-23 15:42:53,906 | extractors.base_extractor | INFO | Found 0 customer batch files
+2026-04-23 15:42:54,137 | extractors.base_extractor | ERROR | Error extracting 'shared/products.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fproducts.json.gz?alt=media: No such object: tuan27/shared/products.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:54,365 | extractors.base_extractor | ERROR | Error extracting 'shared/sapo_locations.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fsapo_locations.json.gz?alt=media: No such object: tuan27/shared/sapo_locations.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:54,586 | extractors.base_extractor | INFO | Found 0 files with prefix 'shopify/'
+2026-04-23 15:42:54,812 | extractors.base_extractor | INFO | Found 0 files with prefix 'sapo/'
+2026-04-23 15:42:54,813 | extractors.base_extractor | WARNING | No Sapo order files matched the expected naming pattern under 'sapo/'.
+2026-04-23 15:42:55,046 | extractors.base_extractor | ERROR | Error extracting 'online_orders/online_orders.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/online_orders%2Fonline_orders.json.gz?alt=media: No such object: tuan27/online_orders/online_orders.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:55,273 | extractors.base_extractor | ERROR | Error extracting 'cart_tracking/cart_events.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/cart_tracking%2Fcart_events.json.gz?alt=media: No such object: tuan27/cart_tracking/cart_events.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:55,514 | extractors.base_extractor | ERROR | Error extracting 'mercury/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/mercury%2Ftransactions.json.gz?alt=media: No such object: tuan27/mercury/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:55,736 | extractors.base_extractor | ERROR | Error extracting 'momo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/momo%2Ftransactions.json.gz?alt=media: No such object: tuan27/momo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:55,991 | extractors.base_extractor | ERROR | Error extracting 'odoo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/odoo%2Ftransactions.json.gz?alt=media: No such object: tuan27/odoo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:56,229 | extractors.base_extractor | ERROR | Error extracting 'paypal/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/paypal%2Ftransactions.json.gz?alt=media: No such object: tuan27/paypal/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:56,459 | extractors.base_extractor | ERROR | Error extracting 'sapo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/sapo%2Ftransactions.json.gz?alt=media: No such object: tuan27/sapo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:56,678 | extractors.base_extractor | ERROR | Error extracting 'zalopay/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/zalopay%2Ftransactions.json.gz?alt=media: No such object: tuan27/zalopay/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 15:42:56,679 | orchestration.pipeline_orchestrator | INFO | Prepared 'customers' with 0 rows and 0 columns.
+2026-04-23 15:42:56,680 | orchestration.pipeline_orchestrator | INFO | Prepared 'products' with 0 rows and 0 columns.
+2026-04-23 15:42:56,680 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_locations' with 0 rows and 0 columns.
+2026-04-23 15:42:56,680 | orchestration.pipeline_orchestrator | INFO | Prepared 'shopify_orders' with 0 rows and 0 columns.
+2026-04-23 15:42:56,680 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_orders' with 0 rows and 0 columns.
+2026-04-23 15:42:56,680 | orchestration.pipeline_orchestrator | INFO | Prepared 'online_orders' with 0 rows and 0 columns.
+2026-04-23 15:42:56,681 | orchestration.pipeline_orchestrator | INFO | Prepared 'cart_events' with 0 rows and 0 columns.
+2026-04-23 15:42:56,681 | orchestration.pipeline_orchestrator | INFO | Prepared 'bank_transactions' with 0 rows and 0 columns.
+2026-04-23 15:42:56,682 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.momo' with 0 rows and 0 columns.
+2026-04-23 15:42:56,682 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.odoo' with 0 rows and 0 columns.
+2026-04-23 15:42:56,683 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.paypal' with 0 rows and 0 columns.
+2026-04-23 15:42:56,683 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.sapo' with 0 rows and 0 columns.
+2026-04-23 15:42:56,683 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.zalopay' with 0 rows and 0 columns.
+2026-04-23 15:42:56,684 | orchestration.pipeline_orchestrator | INFO | Completed step: extract source data (3.26s)
+2026-04-23 15:42:56,684 | orchestration.pipeline_orchestrator | INFO | Starting step: transform fact tables
+2026-04-23 15:42:56,685 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_shopify' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,729 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_sapo' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,730 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_online' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,732 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_shopify' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,733 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_sapo' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,734 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_online' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,735 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_momo' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,736 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_odoo' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,738 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_paypal' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,740 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_sapo' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,741 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_zalopay' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,744 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_cart_events' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,746 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_bank_transactions' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,748 | orchestration.pipeline_orchestrator | INFO | Completed step: transform fact tables (0.06s)
+2026-04-23 15:42:56,748 | orchestration.pipeline_orchestrator | INFO | Starting step: transform dimension tables
+2026-04-23 15:42:56,748 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_customers' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,750 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_products' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,754 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_locations' is empty. Returning an empty table shape.
+2026-04-23 15:42:56,825 | orchestration.pipeline_orchestrator | INFO | Prepared 'dim_date' with 365 rows and 13 columns.
+2026-04-23 15:42:56,828 | orchestration.pipeline_orchestrator | INFO | Completed step: transform dimension tables (0.08s)
+2026-04-23 15:42:56,828 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for dimensions
+2026-04-23 15:42:56,829 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_customers' because it is empty.
+2026-04-23 15:42:56,829 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_products' because it is empty.
+2026-04-23 15:42:56,829 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_locations' because it is empty.
+2026-04-23 15:42:56,832 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-23 15:42:56,832 | transformers.base_transformer | INFO | Shape: rows=365, columns=13
+2026-04-23 15:42:56,863 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 365 entries, 0 to 364
+Data columns (total 13 columns):
+ #   Column          Non-Null Count  Dtype
+---  ------          --------------  -----
+ 0   date_key        365 non-null    int64
+ 1   year            365 non-null    int32
+ 2   quarter         365 non-null    int32
+ 3   month           365 non-null    int32
+ 4   month_name      365 non-null    str  
+ 5   week            365 non-null    int64
+ 6   day_of_month    365 non-null    int32
+ 7   day_of_week     365 non-null    int32
+ 8   day_name        365 non-null    str  
+ 9   is_weekend      365 non-null    bool 
+ 10  is_holiday      365 non-null    bool 
+ 11  fiscal_year     365 non-null    int32
+ 12  fiscal_quarter  365 non-null    int32
+dtypes: bool(2), int32(7), int64(2), str(2)
+memory usage: 27.0 KB
+
+2026-04-23 15:42:56,869 | orchestration.pipeline_orchestrator | INFO | Data quality summary for 'dim_date': {'table_name': 'dim_date', 'row_count': 365, 'column_count': 13, 'null_counts': {}, 'duplicate_count': 0, 'date_validation': {}, 'amount_validation': {}}
+2026-04-23 15:42:56,869 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for dimensions (0.04s)
+2026-04-23 15:42:56,870 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for facts
+2026-04-23 15:42:56,870 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_orders' because it is empty.
+2026-04-23 15:42:56,870 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_order_items' because it is empty.
+2026-04-23 15:42:56,871 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_payments' because it is empty.
+2026-04-23 15:42:56,871 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_cart_events' because it is empty.
+2026-04-23 15:42:56,871 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_bank_transactions' because it is empty.
+2026-04-23 15:42:56,872 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for facts (0.00s)
+2026-04-23 15:42:56,872 | orchestration.pipeline_orchestrator | INFO | Starting step: load dimension tables
+2026-04-23 15:42:56,872 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_customers' because it is empty.
+2026-04-23 15:42:56,872 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_products' because it is empty.
+2026-04-23 15:42:56,873 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_locations' because it is empty.
+2026-04-23 15:42:58,452 | loaders.bigquery_loader | INFO | Dataset 'anh27tuan02:Ancestry' already exists.
+2026-04-23 15:42:58,452 | loaders.bigquery_loader | INFO | Starting load job for table 'anh27tuan02.Ancestry.dim_date' with write_disposition='WRITE_TRUNCATE'.
+2026-04-23 15:43:03,889 | loaders.bigquery_loader | INFO | Loaded 365 rows into 'anh27tuan02.Ancestry.dim_date'.
+2026-04-23 15:43:03,889 | orchestration.pipeline_orchestrator | INFO | Completed step: load dimension tables (7.02s)
+2026-04-23 15:43:03,889 | orchestration.pipeline_orchestrator | INFO | Starting step: load fact tables
+2026-04-23 15:43:03,889 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_orders' because it is empty.
+2026-04-23 15:43:03,890 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_order_items' because it is empty.
+2026-04-23 15:43:03,890 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_payments' because it is empty.
+2026-04-23 15:43:03,890 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_cart_events' because it is empty.
+2026-04-23 15:43:03,890 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_bank_transactions' because it is empty.
+2026-04-23 15:43:03,890 | orchestration.pipeline_orchestrator | INFO | Completed step: load fact tables (0.00s)
+2026-04-23 15:43:03,891 | orchestration.pipeline_orchestrator | WARNING | Skipping aggregate update because dim_customers or fact_orders is empty.
+2026-04-23 15:43:03,891 | orchestration.pipeline_orchestrator | INFO | Starting step: create analysis views
+2026-04-23 15:43:04,712 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 15:43:06,108 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-23 15:43:07,520 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 15:43:09,228 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-23 15:43:10,194 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 15:43:11,547 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-23 15:43:11,547 | orchestration.pipeline_orchestrator | INFO | Completed step: create analysis views (7.66s)
+2026-04-23 15:43:11,547 | orchestration.pipeline_orchestrator | INFO | Pipeline completed successfully. Summary: {'dim_customers': 0, 'dim_products': 0, 'dim_locations': 0, 'dim_date': 365, 'fact_orders': 0, 'fact_order_items': 0, 'fact_payments': 0, 'fact_cart_events': 0, 'fact_bank_transactions': 0, 'dim_customers_aggregate_updates': 0, 'analysis_views': 3}
+2026-04-23 16:18:07,928 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-23 16:18:07,928 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 16:29:01,557 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-23 16:29:01,557 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 16:29:03,752 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-23 16:31:13,942 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-23 16:31:13,943 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 16:31:16,387 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 10485760
+2026-04-23 16:31:16,955 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 16:31:18,701 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 9232
+2026-04-23 16:33:13,037 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-23 16:33:13,960 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 16:33:14,888 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 16:33:15,860 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 16:33:16,780 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 16:33:17,692 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 16:33:18,651 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 16:33:19,562 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-23 16:33:19,562 | orchestration.pipeline_orchestrator | INFO | Starting pipeline orchestration for bucket 'tuan27' and dataset 'Ancestry'.
+2026-04-23 16:33:19,562 | orchestration.pipeline_orchestrator | INFO | Starting step: extract source data
+2026-04-23 16:33:19,817 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-23 16:33:19,817 | extractors.base_extractor | WARNING | No customer batch naming pattern matched under 'shared/customers/'. Falling back to all JSON files.
+2026-04-23 16:33:20,035 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-23 16:33:20,035 | extractors.base_extractor | INFO | Found 0 customer batch files
+2026-04-23 16:33:20,262 | extractors.base_extractor | ERROR | Error extracting 'shared/products.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fproducts.json.gz?alt=media: No such object: tuan27/shared/products.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:20,697 | extractors.base_extractor | ERROR | Error extracting 'shared/sapo_locations.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fsapo_locations.json.gz?alt=media: No such object: tuan27/shared/sapo_locations.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:20,921 | extractors.base_extractor | INFO | Found 0 files with prefix 'shopify/'
+2026-04-23 16:33:21,168 | extractors.base_extractor | INFO | Found 0 files with prefix 'sapo/'
+2026-04-23 16:33:21,168 | extractors.base_extractor | WARNING | No Sapo order files matched the expected naming pattern under 'sapo/'.
+2026-04-23 16:33:21,388 | extractors.base_extractor | ERROR | Error extracting 'online_orders/online_orders.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/online_orders%2Fonline_orders.json.gz?alt=media: No such object: tuan27/online_orders/online_orders.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:21,608 | extractors.base_extractor | ERROR | Error extracting 'cart_tracking/cart_events.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/cart_tracking%2Fcart_events.json.gz?alt=media: No such object: tuan27/cart_tracking/cart_events.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:21,829 | extractors.base_extractor | ERROR | Error extracting 'mercury/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/mercury%2Ftransactions.json.gz?alt=media: No such object: tuan27/mercury/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:22,047 | extractors.base_extractor | ERROR | Error extracting 'momo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/momo%2Ftransactions.json.gz?alt=media: No such object: tuan27/momo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:22,411 | extractors.base_extractor | ERROR | Error extracting 'odoo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/odoo%2Ftransactions.json.gz?alt=media: No such object: tuan27/odoo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:22,719 | extractors.base_extractor | ERROR | Error extracting 'paypal/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/paypal%2Ftransactions.json.gz?alt=media: No such object: tuan27/paypal/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:23,310 | extractors.base_extractor | ERROR | Error extracting 'sapo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/sapo%2Ftransactions.json.gz?alt=media: No such object: tuan27/sapo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:23,537 | extractors.base_extractor | ERROR | Error extracting 'zalopay/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/zalopay%2Ftransactions.json.gz?alt=media: No such object: tuan27/zalopay/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-23 16:33:23,537 | orchestration.pipeline_orchestrator | INFO | Prepared 'customers' with 0 rows and 0 columns.
+2026-04-23 16:33:23,537 | orchestration.pipeline_orchestrator | INFO | Prepared 'products' with 0 rows and 0 columns.
+2026-04-23 16:33:23,537 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_locations' with 0 rows and 0 columns.
+2026-04-23 16:33:23,537 | orchestration.pipeline_orchestrator | INFO | Prepared 'shopify_orders' with 0 rows and 0 columns.
+2026-04-23 16:33:23,538 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_orders' with 0 rows and 0 columns.
+2026-04-23 16:33:23,538 | orchestration.pipeline_orchestrator | INFO | Prepared 'online_orders' with 0 rows and 0 columns.
+2026-04-23 16:33:23,538 | orchestration.pipeline_orchestrator | INFO | Prepared 'cart_events' with 0 rows and 0 columns.
+2026-04-23 16:33:23,538 | orchestration.pipeline_orchestrator | INFO | Prepared 'bank_transactions' with 0 rows and 0 columns.
+2026-04-23 16:33:23,538 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.momo' with 0 rows and 0 columns.
+2026-04-23 16:33:23,538 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.odoo' with 0 rows and 0 columns.
+2026-04-23 16:33:23,539 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.paypal' with 0 rows and 0 columns.
+2026-04-23 16:33:23,539 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.sapo' with 0 rows and 0 columns.
+2026-04-23 16:33:23,539 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.zalopay' with 0 rows and 0 columns.
+2026-04-23 16:33:23,539 | orchestration.pipeline_orchestrator | INFO | Completed step: extract source data (3.98s)
+2026-04-23 16:33:23,539 | orchestration.pipeline_orchestrator | INFO | Starting step: transform fact tables
+2026-04-23 16:33:23,539 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_shopify' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,554 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_sapo' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,555 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_online' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,556 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_shopify' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,556 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_sapo' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,556 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_online' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,557 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_momo' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,557 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_odoo' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,558 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_paypal' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,558 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_sapo' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,559 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_zalopay' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,559 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_cart_events' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,560 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_bank_transactions' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,561 | orchestration.pipeline_orchestrator | INFO | Completed step: transform fact tables (0.02s)
+2026-04-23 16:33:23,561 | orchestration.pipeline_orchestrator | INFO | Starting step: transform dimension tables
+2026-04-23 16:33:23,561 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_customers' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,562 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_products' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,563 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_locations' is empty. Returning an empty table shape.
+2026-04-23 16:33:23,587 | orchestration.pipeline_orchestrator | INFO | Prepared 'dim_date' with 365 rows and 13 columns.
+2026-04-23 16:33:23,589 | orchestration.pipeline_orchestrator | INFO | Completed step: transform dimension tables (0.03s)
+2026-04-23 16:33:23,589 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for dimensions
+2026-04-23 16:33:23,590 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_customers' because it is empty.
+2026-04-23 16:33:23,590 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_products' because it is empty.
+2026-04-23 16:33:23,590 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_locations' because it is empty.
+2026-04-23 16:33:23,591 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-23 16:33:23,592 | transformers.base_transformer | INFO | Shape: rows=365, columns=13
+2026-04-23 16:33:23,607 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 365 entries, 0 to 364
+Data columns (total 13 columns):
+ #   Column          Non-Null Count  Dtype
+---  ------          --------------  -----
+ 0   date_key        365 non-null    int64
+ 1   year            365 non-null    int32
+ 2   quarter         365 non-null    int32
+ 3   month           365 non-null    int32
+ 4   month_name      365 non-null    str  
+ 5   week            365 non-null    int64
+ 6   day_of_month    365 non-null    int32
+ 7   day_of_week     365 non-null    int32
+ 8   day_name        365 non-null    str  
+ 9   is_weekend      365 non-null    bool 
+ 10  is_holiday      365 non-null    bool 
+ 11  fiscal_year     365 non-null    int32
+ 12  fiscal_quarter  365 non-null    int32
+dtypes: bool(2), int32(7), int64(2), str(2)
+memory usage: 27.0 KB
+
+2026-04-23 16:33:23,611 | orchestration.pipeline_orchestrator | INFO | Data quality summary for 'dim_date': {'table_name': 'dim_date', 'row_count': 365, 'column_count': 13, 'null_counts': {}, 'duplicate_count': 0, 'date_validation': {}, 'amount_validation': {}}
+2026-04-23 16:33:23,611 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for dimensions (0.02s)
+2026-04-23 16:33:23,611 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for facts
+2026-04-23 16:33:23,611 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_orders' because it is empty.
+2026-04-23 16:33:23,611 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_order_items' because it is empty.
+2026-04-23 16:33:23,611 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_payments' because it is empty.
+2026-04-23 16:33:23,611 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_cart_events' because it is empty.
+2026-04-23 16:33:23,612 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_bank_transactions' because it is empty.
+2026-04-23 16:33:23,612 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for facts (0.00s)
+2026-04-23 16:33:23,612 | orchestration.pipeline_orchestrator | INFO | Starting step: load dimension tables
+2026-04-23 16:33:23,612 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_customers' because it is empty.
+2026-04-23 16:33:23,612 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_products' because it is empty.
+2026-04-23 16:33:23,612 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_locations' because it is empty.
+2026-04-23 16:33:24,844 | loaders.bigquery_loader | INFO | Dataset 'anh27tuan02:Ancestry' already exists.
+2026-04-23 16:33:24,844 | loaders.bigquery_loader | INFO | Starting load job for table 'anh27tuan02.Ancestry.dim_date' with write_disposition='WRITE_TRUNCATE'.
+2026-04-23 16:33:31,832 | loaders.bigquery_loader | INFO | Loaded 365 rows into 'anh27tuan02.Ancestry.dim_date'.
+2026-04-23 16:33:31,832 | orchestration.pipeline_orchestrator | INFO | Completed step: load dimension tables (8.22s)
+2026-04-23 16:33:31,832 | orchestration.pipeline_orchestrator | INFO | Starting step: load fact tables
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_orders' because it is empty.
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_order_items' because it is empty.
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_payments' because it is empty.
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_cart_events' because it is empty.
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_bank_transactions' because it is empty.
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | INFO | Completed step: load fact tables (0.00s)
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | WARNING | Skipping aggregate update because dim_customers or fact_orders is empty.
+2026-04-23 16:33:31,833 | orchestration.pipeline_orchestrator | INFO | Starting step: create analysis views
+2026-04-23 16:33:32,638 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 16:33:34,032 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-23 16:33:35,534 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 16:33:36,837 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-23 16:33:37,629 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-23 16:33:38,981 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-23 16:33:38,981 | orchestration.pipeline_orchestrator | INFO | Completed step: create analysis views (7.15s)
+2026-04-23 16:33:38,981 | orchestration.pipeline_orchestrator | INFO | Pipeline completed successfully. Summary: {'dim_customers': 0, 'dim_products': 0, 'dim_locations': 0, 'dim_date': 365, 'fact_orders': 0, 'fact_order_items': 0, 'fact_payments': 0, 'fact_cart_events': 0, 'fact_bank_transactions': 0, 'dim_customers_aggregate_updates': 0, 'analysis_views': 3}

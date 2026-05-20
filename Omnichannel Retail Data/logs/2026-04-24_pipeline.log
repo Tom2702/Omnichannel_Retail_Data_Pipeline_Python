@@ -1,0 +1,1306 @@
+2026-04-24 08:59:36,366 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 08:59:37,526 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 08:59:38,537 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 08:59:39,411 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 08:59:40,290 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 08:59:41,299 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 08:59:42,290 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 08:59:43,457 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 08:59:43,457 | orchestration.pipeline_orchestrator | INFO | Starting pipeline orchestration for bucket 'tuan27' and dataset 'Ancestry'.
+2026-04-24 08:59:43,457 | orchestration.pipeline_orchestrator | INFO | Starting step: extract source data
+2026-04-24 08:59:43,689 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-24 08:59:43,689 | extractors.base_extractor | WARNING | No customer batch naming pattern matched under 'shared/customers/'. Falling back to all JSON files.
+2026-04-24 08:59:43,915 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-24 08:59:43,915 | extractors.base_extractor | INFO | Found 0 customer batch files
+2026-04-24 08:59:44,145 | extractors.base_extractor | ERROR | Error extracting 'shared/products.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fproducts.json.gz?alt=media: No such object: tuan27/shared/products.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:44,367 | extractors.base_extractor | ERROR | Error extracting 'shared/sapo_locations.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fsapo_locations.json.gz?alt=media: No such object: tuan27/shared/sapo_locations.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:44,583 | extractors.base_extractor | INFO | Found 0 files with prefix 'shopify/'
+2026-04-24 08:59:44,798 | extractors.base_extractor | INFO | Found 0 files with prefix 'sapo/'
+2026-04-24 08:59:44,799 | extractors.base_extractor | WARNING | No Sapo order files matched the expected naming pattern under 'sapo/'.
+2026-04-24 08:59:45,049 | extractors.base_extractor | ERROR | Error extracting 'online_orders/online_orders.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/online_orders%2Fonline_orders.json.gz?alt=media: No such object: tuan27/online_orders/online_orders.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:45,280 | extractors.base_extractor | ERROR | Error extracting 'cart_tracking/cart_events.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/cart_tracking%2Fcart_events.json.gz?alt=media: No such object: tuan27/cart_tracking/cart_events.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:45,497 | extractors.base_extractor | ERROR | Error extracting 'mercury/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/mercury%2Ftransactions.json.gz?alt=media: No such object: tuan27/mercury/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:45,719 | extractors.base_extractor | ERROR | Error extracting 'momo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/momo%2Ftransactions.json.gz?alt=media: No such object: tuan27/momo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:45,971 | extractors.base_extractor | ERROR | Error extracting 'odoo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/odoo%2Ftransactions.json.gz?alt=media: No such object: tuan27/odoo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:46,231 | extractors.base_extractor | ERROR | Error extracting 'paypal/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/paypal%2Ftransactions.json.gz?alt=media: No such object: tuan27/paypal/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:46,595 | extractors.base_extractor | ERROR | Error extracting 'sapo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/sapo%2Ftransactions.json.gz?alt=media: No such object: tuan27/sapo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:46,894 | extractors.base_extractor | ERROR | Error extracting 'zalopay/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/zalopay%2Ftransactions.json.gz?alt=media: No such object: tuan27/zalopay/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 08:59:46,894 | orchestration.pipeline_orchestrator | INFO | Prepared 'customers' with 0 rows and 0 columns.
+2026-04-24 08:59:46,894 | orchestration.pipeline_orchestrator | INFO | Prepared 'products' with 0 rows and 0 columns.
+2026-04-24 08:59:46,894 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_locations' with 0 rows and 0 columns.
+2026-04-24 08:59:46,894 | orchestration.pipeline_orchestrator | INFO | Prepared 'shopify_orders' with 0 rows and 0 columns.
+2026-04-24 08:59:46,894 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_orders' with 0 rows and 0 columns.
+2026-04-24 08:59:46,894 | orchestration.pipeline_orchestrator | INFO | Prepared 'online_orders' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Prepared 'cart_events' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Prepared 'bank_transactions' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.momo' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.odoo' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.paypal' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.sapo' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.zalopay' with 0 rows and 0 columns.
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Completed step: extract source data (3.44s)
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | INFO | Starting step: transform fact tables
+2026-04-24 08:59:46,895 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_shopify' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,038 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_sapo' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,038 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_online' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,039 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_shopify' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,040 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_sapo' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,040 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_online' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,040 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_momo' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,041 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_odoo' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,041 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_paypal' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,042 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_sapo' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,043 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_zalopay' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,044 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_cart_events' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,045 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_bank_transactions' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,047 | orchestration.pipeline_orchestrator | INFO | Completed step: transform fact tables (0.15s)
+2026-04-24 08:59:47,047 | orchestration.pipeline_orchestrator | INFO | Starting step: transform dimension tables
+2026-04-24 08:59:47,047 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_customers' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,048 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_products' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,049 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_locations' is empty. Returning an empty table shape.
+2026-04-24 08:59:47,102 | orchestration.pipeline_orchestrator | INFO | Prepared 'dim_date' with 365 rows and 13 columns.
+2026-04-24 08:59:47,104 | orchestration.pipeline_orchestrator | INFO | Completed step: transform dimension tables (0.06s)
+2026-04-24 08:59:47,104 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for dimensions
+2026-04-24 08:59:47,105 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_customers' because it is empty.
+2026-04-24 08:59:47,105 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_products' because it is empty.
+2026-04-24 08:59:47,105 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_locations' because it is empty.
+2026-04-24 08:59:47,108 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-24 08:59:47,108 | transformers.base_transformer | INFO | Shape: rows=365, columns=13
+2026-04-24 08:59:47,132 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 365 entries, 0 to 364
+Data columns (total 13 columns):
+ #   Column          Non-Null Count  Dtype
+---  ------          --------------  -----
+ 0   date_key        365 non-null    int64
+ 1   year            365 non-null    int32
+ 2   quarter         365 non-null    int32
+ 3   month           365 non-null    int32
+ 4   month_name      365 non-null    str  
+ 5   week            365 non-null    int64
+ 6   day_of_month    365 non-null    int32
+ 7   day_of_week     365 non-null    int32
+ 8   day_name        365 non-null    str  
+ 9   is_weekend      365 non-null    bool 
+ 10  is_holiday      365 non-null    bool 
+ 11  fiscal_year     365 non-null    int32
+ 12  fiscal_quarter  365 non-null    int32
+dtypes: bool(2), int32(7), int64(2), str(2)
+memory usage: 27.0 KB
+
+2026-04-24 08:59:47,139 | orchestration.pipeline_orchestrator | INFO | Data quality summary for 'dim_date': {'table_name': 'dim_date', 'row_count': 365, 'column_count': 13, 'null_counts': {}, 'duplicate_count': 0, 'date_validation': {}, 'amount_validation': {}}
+2026-04-24 08:59:47,139 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for dimensions (0.03s)
+2026-04-24 08:59:47,139 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for facts
+2026-04-24 08:59:47,139 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_orders' because it is empty.
+2026-04-24 08:59:47,140 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_order_items' because it is empty.
+2026-04-24 08:59:47,140 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_payments' because it is empty.
+2026-04-24 08:59:47,140 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_cart_events' because it is empty.
+2026-04-24 08:59:47,140 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_bank_transactions' because it is empty.
+2026-04-24 08:59:47,140 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for facts (0.00s)
+2026-04-24 08:59:47,141 | orchestration.pipeline_orchestrator | INFO | Starting step: load dimension tables
+2026-04-24 08:59:47,141 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_customers' because it is empty.
+2026-04-24 08:59:47,141 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_products' because it is empty.
+2026-04-24 08:59:47,141 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_locations' because it is empty.
+2026-04-24 08:59:48,332 | loaders.bigquery_loader | INFO | Dataset 'anh27tuan02:Ancestry' already exists.
+2026-04-24 08:59:48,332 | loaders.bigquery_loader | INFO | Starting load job for table 'anh27tuan02.Ancestry.dim_date' with write_disposition='WRITE_TRUNCATE'.
+2026-04-24 08:59:53,764 | loaders.bigquery_loader | INFO | Loaded 365 rows into 'anh27tuan02.Ancestry.dim_date'.
+2026-04-24 08:59:53,764 | orchestration.pipeline_orchestrator | INFO | Completed step: load dimension tables (6.62s)
+2026-04-24 08:59:53,764 | orchestration.pipeline_orchestrator | INFO | Starting step: load fact tables
+2026-04-24 08:59:53,765 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_orders' because it is empty.
+2026-04-24 08:59:53,765 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_order_items' because it is empty.
+2026-04-24 08:59:53,765 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_payments' because it is empty.
+2026-04-24 08:59:53,765 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_cart_events' because it is empty.
+2026-04-24 08:59:53,766 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_bank_transactions' because it is empty.
+2026-04-24 08:59:53,766 | orchestration.pipeline_orchestrator | INFO | Completed step: load fact tables (0.00s)
+2026-04-24 08:59:53,766 | orchestration.pipeline_orchestrator | WARNING | Skipping aggregate update because dim_customers or fact_orders is empty.
+2026-04-24 08:59:53,766 | orchestration.pipeline_orchestrator | INFO | Starting step: create analysis views
+2026-04-24 08:59:54,588 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 08:59:55,937 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 08:59:57,176 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 08:59:58,588 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 08:59:59,574 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:00:00,900 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:00:00,900 | orchestration.pipeline_orchestrator | INFO | Completed step: create analysis views (7.13s)
+2026-04-24 09:00:00,900 | orchestration.pipeline_orchestrator | INFO | Pipeline completed successfully. Summary: {'dim_customers': 0, 'dim_products': 0, 'dim_locations': 0, 'dim_date': 365, 'fact_orders': 0, 'fact_order_items': 0, 'fact_payments': 0, 'fact_cart_events': 0, 'fact_bank_transactions': 0, 'dim_customers_aggregate_updates': 0, 'analysis_views': 3}
+2026-04-24 09:02:50,300 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:02:50,300 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:02:52,742 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 10485760
+2026-04-24 09:10:29,119 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:10:29,119 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-24 09:10:29,137 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-24 09:10:29,140 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-24 09:10:29,147 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-24 09:10:29,155 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:10:29,204 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:10:29,210 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:10:29,213 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 12)
+2026-04-24 09:10:29,225 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:10:29,244 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:10:29,264 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:11:05,259 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:11:05,259 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-24 09:11:05,264 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-24 09:11:05,265 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-24 09:11:05,268 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-24 09:11:05,272 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:11:05,307 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:11:05,312 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:11:05,315 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 12)
+2026-04-24 09:11:05,325 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:11:05,342 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:11:05,358 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:11:05,546 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-24 09:11:07,270 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-24 09:11:08,554 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-24 09:11:09,938 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-24 09:11:11,265 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-24 09:11:43,610 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:11:43,610 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-24 09:11:43,617 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-24 09:11:43,620 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-24 09:11:43,630 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-24 09:11:43,638 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:11:43,702 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:11:43,717 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:11:43,722 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 12)
+2026-04-24 09:11:43,745 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:11:43,766 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:11:43,786 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:12:17,023 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:12:17,023 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-24 09:12:17,028 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-24 09:12:17,030 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-24 09:12:17,034 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-24 09:12:17,038 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:17,077 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:12:17,087 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:17,091 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 12)
+2026-04-24 09:12:17,104 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:12:17,125 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:17,144 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:12:17,166 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:17,179 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:17,185 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:17,187 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 10)
+2026-04-24 09:12:17,197 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:12:17,204 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:17,207 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 8)
+2026-04-24 09:12:17,217 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:12:17,231 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:12:17,247 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:12:17,251 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-24 09:12:17,251 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-24 09:12:17,270 | transformers.base_transformer | INFO | --- Data Quality check: dim_customers ---
+2026-04-24 09:12:17,270 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:12:17,273 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   customer_id         2 non-null      Int64              
+ 1   email               2 non-null      string             
+ 2   full_name           2 non-null      string             
+ 3   phone               1 non-null      string             
+ 4   city                2 non-null      string             
+ 5   country             2 non-null      string             
+ 6   created_at          2 non-null      datetime64[us, UTC]
+ 7   customer_segment    2 non-null      string             
+ 8   lifetime_value_vnd  2 non-null      float64            
+ 9   total_orders        2 non-null      Int64              
+ 10  first_order_date    0 non-null      datetime64[s]      
+ 11  last_order_date     0 non-null      datetime64[s]      
+dtypes: Int64(2), datetime64[s](2), datetime64[us, UTC](1), float64(1), string(6)
+memory usage: 424.0 bytes
+
+2026-04-24 09:12:17,275 | transformers.base_transformer | INFO | --- Data Quality check: dim_products ---
+2026-04-24 09:12:17,275 | transformers.base_transformer | INFO | Shape: rows=2, columns=10
+2026-04-24 09:12:17,278 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   product_id      2 non-null      Int64  
+ 1   product_name    2 non-null      string 
+ 2   sku             2 non-null      string 
+ 3   barcode         2 non-null      string 
+ 4   category        2 non-null      string 
+ 5   brand           2 non-null      string 
+ 6   price_vnd       2 non-null      int64  
+ 7   price_usd       2 non-null      float64
+ 8   stock_quantity  2 non-null      Int64  
+ 9   is_active       2 non-null      boolean
+dtypes: Int64(2), boolean(1), float64(1), int64(1), string(5)
+memory usage: 368.0 bytes
+
+2026-04-24 09:12:17,280 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-24 09:12:17,280 | transformers.base_transformer | INFO | Shape: rows=6, columns=14
+2026-04-24 09:12:17,284 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   date_key        6 non-null      int64 
+ 1   full_date       6 non-null      object
+ 2   year            6 non-null      int32 
+ 3   quarter         6 non-null      int32 
+ 4   month           6 non-null      int32 
+ 5   month_name      6 non-null      str   
+ 6   week            6 non-null      int64 
+ 7   day_of_month    6 non-null      int32 
+ 8   day_of_week     6 non-null      int32 
+ 9   day_name        6 non-null      str   
+ 10  is_weekend      6 non-null      bool  
+ 11  is_holiday      6 non-null      bool  
+ 12  fiscal_year     6 non-null      int32 
+ 13  fiscal_quarter  6 non-null      int32 
+dtypes: bool(2), int32(7), int64(2), object(1), str(2)
+memory usage: 625.0+ bytes
+
+2026-04-24 09:12:17,285 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:12:17,285 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:12:17,288 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column          Non-Null Count  Dtype              
+---  ------          --------------  -----              
+ 0   order_key       2 non-null      str                
+ 1   order_id        2 non-null      string             
+ 2   transaction_id  2 non-null      string             
+ 3   customer_id     2 non-null      Int64              
+ 4   order_date_key  2 non-null      object             
+ 5   order_date      2 non-null      datetime64[us, UTC]
+ 6   channel         2 non-null      string             
+ 7   source          2 non-null      string             
+ 8   status          2 non-null      string             
+ 9   payment_status  2 non-null      string             
+ 10  total_vnd       2 non-null      int64              
+ 11  total_usd       2 non-null      float64            
+dtypes: Int64(1), datetime64[us, UTC](1), float64(1), int64(1), object(1), str(1), string(6)
+memory usage: 447.0+ bytes
+
+2026-04-24 09:12:17,294 | transformers.base_transformer | INFO | --- Data Quality check: fact_order_items ---
+2026-04-24 09:12:17,294 | transformers.base_transformer | INFO | Shape: rows=3, columns=8
+2026-04-24 09:12:17,298 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   order_item_key  3 non-null      str    
+ 1   order_key       3 non-null      string 
+ 2   transaction_id  3 non-null      string 
+ 3   product_id      3 non-null      Int64  
+ 4   order_date_key  3 non-null      object 
+ 5   quantity        3 non-null      float64
+ 6   unit_price_vnd  3 non-null      float64
+ 7   line_total_vnd  3 non-null      float64
+dtypes: Int64(1), float64(3), object(1), str(1), string(2)
+memory usage: 477.0+ bytes
+
+2026-04-24 09:12:17,302 | transformers.base_transformer | INFO | --- Data Quality check: fact_payments ---
+2026-04-24 09:12:17,302 | transformers.base_transformer | INFO | Shape: rows=1, columns=10
+2026-04-24 09:12:17,305 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 10 columns):
+ #   Column            Non-Null Count  Dtype              
+---  ------            --------------  -----              
+ 0   payment_key       1 non-null      str                
+ 1   transaction_id    1 non-null      string             
+ 2   order_id          1 non-null      string             
+ 3   customer_id       1 non-null      Int64              
+ 4   payment_gateway   1 non-null      string             
+ 5   payment_method    1 non-null      string             
+ 6   amount_vnd        1 non-null      int64              
+ 7   payment_status    1 non-null      string             
+ 8   payment_date_key  1 non-null      object             
+ 9   payment_date      1 non-null      datetime64[us, UTC]
+dtypes: Int64(1), datetime64[us, UTC](1), int64(1), object(1), str(1), string(5)
+memory usage: 262.0+ bytes
+
+2026-04-24 09:12:17,310 | transformers.base_transformer | INFO | --- Data Quality check: fact_cart_events ---
+2026-04-24 09:12:17,310 | transformers.base_transformer | INFO | Shape: rows=1, columns=13
+2026-04-24 09:12:17,314 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 13 columns):
+ #   Column           Non-Null Count  Dtype              
+---  ------           --------------  -----              
+ 0   event_key        1 non-null      str                
+ 1   event_id         1 non-null      string             
+ 2   session_id       1 non-null      string             
+ 3   customer_id      1 non-null      Int64              
+ 4   event_type       1 non-null      string             
+ 5   event_date_key   1 non-null      object             
+ 6   event_timestamp  1 non-null      datetime64[us, UTC]
+ 7   product_id       1 non-null      Int64              
+ 8   source           1 non-null      string             
+ 9   device           1 non-null      string             
+ 10  browser          1 non-null      string             
+ 11  utm_source       1 non-null      string             
+ 12  utm_campaign     1 non-null      string             
+dtypes: Int64(2), datetime64[us, UTC](1), object(1), str(1), string(8)
+memory usage: 307.0+ bytes
+
+2026-04-24 09:12:40,861 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:12:40,861 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-24 09:12:40,866 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-24 09:12:40,868 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-24 09:12:40,871 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-24 09:12:40,875 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:40,913 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:12:40,919 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:40,922 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 12)
+2026-04-24 09:12:40,935 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:12:40,959 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:40,996 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:12:41,020 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:41,035 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:41,043 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:41,045 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 10)
+2026-04-24 09:12:41,056 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:12:41,061 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:12:41,063 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 8)
+2026-04-24 09:12:41,074 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:12:41,089 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:12:41,104 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:12:41,108 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-24 09:12:41,108 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-24 09:12:41,123 | transformers.base_transformer | INFO | --- Data Quality check: dim_customers ---
+2026-04-24 09:12:41,123 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:12:41,126 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   customer_id         2 non-null      Int64              
+ 1   email               2 non-null      string             
+ 2   full_name           2 non-null      string             
+ 3   phone               1 non-null      string             
+ 4   city                2 non-null      string             
+ 5   country             2 non-null      string             
+ 6   created_at          2 non-null      datetime64[us, UTC]
+ 7   customer_segment    2 non-null      string             
+ 8   lifetime_value_vnd  2 non-null      float64            
+ 9   total_orders        2 non-null      Int64              
+ 10  first_order_date    0 non-null      datetime64[s]      
+ 11  last_order_date     0 non-null      datetime64[s]      
+dtypes: Int64(2), datetime64[s](2), datetime64[us, UTC](1), float64(1), string(6)
+memory usage: 424.0 bytes
+
+2026-04-24 09:12:41,128 | transformers.base_transformer | INFO | --- Data Quality check: dim_products ---
+2026-04-24 09:12:41,128 | transformers.base_transformer | INFO | Shape: rows=2, columns=10
+2026-04-24 09:12:41,131 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   product_id      2 non-null      Int64  
+ 1   product_name    2 non-null      string 
+ 2   sku             2 non-null      string 
+ 3   barcode         2 non-null      string 
+ 4   category        2 non-null      string 
+ 5   brand           2 non-null      string 
+ 6   price_vnd       2 non-null      int64  
+ 7   price_usd       2 non-null      float64
+ 8   stock_quantity  2 non-null      Int64  
+ 9   is_active       2 non-null      boolean
+dtypes: Int64(2), boolean(1), float64(1), int64(1), string(5)
+memory usage: 368.0 bytes
+
+2026-04-24 09:12:41,133 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-24 09:12:41,133 | transformers.base_transformer | INFO | Shape: rows=6, columns=14
+2026-04-24 09:12:41,136 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   date_key        6 non-null      int64 
+ 1   full_date       6 non-null      object
+ 2   year            6 non-null      int32 
+ 3   quarter         6 non-null      int32 
+ 4   month           6 non-null      int32 
+ 5   month_name      6 non-null      str   
+ 6   week            6 non-null      int64 
+ 7   day_of_month    6 non-null      int32 
+ 8   day_of_week     6 non-null      int32 
+ 9   day_name        6 non-null      str   
+ 10  is_weekend      6 non-null      bool  
+ 11  is_holiday      6 non-null      bool  
+ 12  fiscal_year     6 non-null      int32 
+ 13  fiscal_quarter  6 non-null      int32 
+dtypes: bool(2), int32(7), int64(2), object(1), str(2)
+memory usage: 625.0+ bytes
+
+2026-04-24 09:12:41,137 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:12:41,138 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:12:41,141 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column          Non-Null Count  Dtype              
+---  ------          --------------  -----              
+ 0   order_key       2 non-null      str                
+ 1   order_id        2 non-null      string             
+ 2   transaction_id  2 non-null      string             
+ 3   customer_id     2 non-null      Int64              
+ 4   order_date_key  2 non-null      object             
+ 5   order_date      2 non-null      datetime64[us, UTC]
+ 6   channel         2 non-null      string             
+ 7   source          2 non-null      string             
+ 8   status          2 non-null      string             
+ 9   payment_status  2 non-null      string             
+ 10  total_vnd       2 non-null      int64              
+ 11  total_usd       2 non-null      float64            
+dtypes: Int64(1), datetime64[us, UTC](1), float64(1), int64(1), object(1), str(1), string(6)
+memory usage: 447.0+ bytes
+
+2026-04-24 09:12:41,148 | transformers.base_transformer | INFO | --- Data Quality check: fact_order_items ---
+2026-04-24 09:12:41,148 | transformers.base_transformer | INFO | Shape: rows=3, columns=8
+2026-04-24 09:12:41,151 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   order_item_key  3 non-null      str    
+ 1   order_key       3 non-null      string 
+ 2   transaction_id  3 non-null      string 
+ 3   product_id      3 non-null      Int64  
+ 4   order_date_key  3 non-null      object 
+ 5   quantity        3 non-null      float64
+ 6   unit_price_vnd  3 non-null      float64
+ 7   line_total_vnd  3 non-null      float64
+dtypes: Int64(1), float64(3), object(1), str(1), string(2)
+memory usage: 477.0+ bytes
+
+2026-04-24 09:12:41,156 | transformers.base_transformer | INFO | --- Data Quality check: fact_payments ---
+2026-04-24 09:12:41,156 | transformers.base_transformer | INFO | Shape: rows=1, columns=10
+2026-04-24 09:12:41,159 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 10 columns):
+ #   Column            Non-Null Count  Dtype              
+---  ------            --------------  -----              
+ 0   payment_key       1 non-null      str                
+ 1   transaction_id    1 non-null      string             
+ 2   order_id          1 non-null      string             
+ 3   customer_id       1 non-null      Int64              
+ 4   payment_gateway   1 non-null      string             
+ 5   payment_method    1 non-null      string             
+ 6   amount_vnd        1 non-null      int64              
+ 7   payment_status    1 non-null      string             
+ 8   payment_date_key  1 non-null      object             
+ 9   payment_date      1 non-null      datetime64[us, UTC]
+dtypes: Int64(1), datetime64[us, UTC](1), int64(1), object(1), str(1), string(5)
+memory usage: 262.0+ bytes
+
+2026-04-24 09:12:41,164 | transformers.base_transformer | INFO | --- Data Quality check: fact_cart_events ---
+2026-04-24 09:12:41,164 | transformers.base_transformer | INFO | Shape: rows=1, columns=13
+2026-04-24 09:12:41,167 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 13 columns):
+ #   Column           Non-Null Count  Dtype              
+---  ------           --------------  -----              
+ 0   event_key        1 non-null      str                
+ 1   event_id         1 non-null      string             
+ 2   session_id       1 non-null      string             
+ 3   customer_id      1 non-null      Int64              
+ 4   event_type       1 non-null      string             
+ 5   event_date_key   1 non-null      object             
+ 6   event_timestamp  1 non-null      datetime64[us, UTC]
+ 7   product_id       1 non-null      Int64              
+ 8   source           1 non-null      string             
+ 9   device           1 non-null      string             
+ 10  browser          1 non-null      string             
+ 11  utm_source       1 non-null      string             
+ 12  utm_campaign     1 non-null      string             
+dtypes: Int64(2), datetime64[us, UTC](1), object(1), str(1), string(8)
+memory usage: 307.0+ bytes
+
+2026-04-24 09:13:31,544 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:13:31,545 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:13:36,625 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 30608000
+2026-04-24 09:13:37,445 | loaders.bigquery_loader | INFO | Dataset 'anh27tuan02:Ancestry' already exists.
+2026-04-24 09:13:37,445 | loaders.bigquery_loader | INFO | Starting load job for table 'anh27tuan02.Ancestry.dim_date' with write_disposition='WRITE_TRUNCATE'.
+2026-04-24 09:13:42,268 | loaders.bigquery_loader | INFO | Loaded 366 rows into 'anh27tuan02.Ancestry.dim_date'.
+2026-04-24 09:13:42,268 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:13:43,585 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 2928
+2026-04-24 09:13:52,616 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:13:52,616 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:13:54,674 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 10485760
+2026-04-24 09:14:05,082 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:14:05,083 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:14:07,010 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:15:44,870 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:15:46,100 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:15:47,382 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:15:49,023 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:15:50,727 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:15:52,014 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:15:53,126 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:15:54,826 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:15:54,827 | orchestration.pipeline_orchestrator | INFO | Starting pipeline orchestration for bucket 'tuan27' and dataset 'Ancestry'.
+2026-04-24 09:15:54,827 | orchestration.pipeline_orchestrator | INFO | Starting step: extract source data
+2026-04-24 09:15:55,104 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-24 09:15:55,104 | extractors.base_extractor | WARNING | No customer batch naming pattern matched under 'shared/customers/'. Falling back to all JSON files.
+2026-04-24 09:15:55,466 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-24 09:15:55,466 | extractors.base_extractor | INFO | Found 0 customer batch files
+2026-04-24 09:15:55,747 | extractors.base_extractor | ERROR | Error extracting 'shared/products.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fproducts.json.gz?alt=media: No such object: tuan27/shared/products.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:55,961 | extractors.base_extractor | ERROR | Error extracting 'shared/sapo_locations.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fsapo_locations.json.gz?alt=media: No such object: tuan27/shared/sapo_locations.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:56,173 | extractors.base_extractor | INFO | Found 0 files with prefix 'shopify/'
+2026-04-24 09:15:56,560 | extractors.base_extractor | INFO | Found 0 files with prefix 'sapo/'
+2026-04-24 09:15:56,560 | extractors.base_extractor | WARNING | No Sapo order files matched the expected naming pattern under 'sapo/'.
+2026-04-24 09:15:56,773 | extractors.base_extractor | ERROR | Error extracting 'online_orders/online_orders.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/online_orders%2Fonline_orders.json.gz?alt=media: No such object: tuan27/online_orders/online_orders.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:56,998 | extractors.base_extractor | ERROR | Error extracting 'cart_tracking/cart_events.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/cart_tracking%2Fcart_events.json.gz?alt=media: No such object: tuan27/cart_tracking/cart_events.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:57,233 | extractors.base_extractor | ERROR | Error extracting 'mercury/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/mercury%2Ftransactions.json.gz?alt=media: No such object: tuan27/mercury/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:57,454 | extractors.base_extractor | ERROR | Error extracting 'momo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/momo%2Ftransactions.json.gz?alt=media: No such object: tuan27/momo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:57,681 | extractors.base_extractor | ERROR | Error extracting 'odoo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/odoo%2Ftransactions.json.gz?alt=media: No such object: tuan27/odoo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:58,372 | extractors.base_extractor | ERROR | Error extracting 'paypal/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/paypal%2Ftransactions.json.gz?alt=media: No such object: tuan27/paypal/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:58,592 | extractors.base_extractor | ERROR | Error extracting 'sapo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/sapo%2Ftransactions.json.gz?alt=media: No such object: tuan27/sapo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:58,816 | extractors.base_extractor | ERROR | Error extracting 'zalopay/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/zalopay%2Ftransactions.json.gz?alt=media: No such object: tuan27/zalopay/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:15:58,816 | orchestration.pipeline_orchestrator | INFO | Prepared 'customers' with 0 rows and 0 columns.
+2026-04-24 09:15:58,816 | orchestration.pipeline_orchestrator | INFO | Prepared 'products' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_locations' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'shopify_orders' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_orders' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'online_orders' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'cart_events' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'bank_transactions' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.momo' with 0 rows and 0 columns.
+2026-04-24 09:15:58,817 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.odoo' with 0 rows and 0 columns.
+2026-04-24 09:15:58,818 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.paypal' with 0 rows and 0 columns.
+2026-04-24 09:15:58,818 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.sapo' with 0 rows and 0 columns.
+2026-04-24 09:15:58,818 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.zalopay' with 0 rows and 0 columns.
+2026-04-24 09:15:58,818 | orchestration.pipeline_orchestrator | INFO | Completed step: extract source data (3.99s)
+2026-04-24 09:15:58,818 | orchestration.pipeline_orchestrator | INFO | Starting step: transform fact tables
+2026-04-24 09:15:58,818 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_shopify' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,844 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_sapo' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,845 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_online' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,846 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_shopify' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,847 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_sapo' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,847 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_online' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,848 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_momo' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,848 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_odoo' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,848 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_paypal' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,849 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_sapo' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,849 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_zalopay' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,850 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_cart_events' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,850 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_bank_transactions' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,876 | orchestration.pipeline_orchestrator | INFO | Completed step: transform fact tables (0.06s)
+2026-04-24 09:15:58,877 | orchestration.pipeline_orchestrator | INFO | Starting step: transform dimension tables
+2026-04-24 09:15:58,877 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_customers' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,879 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_products' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,882 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_locations' is empty. Returning an empty table shape.
+2026-04-24 09:15:58,939 | orchestration.pipeline_orchestrator | INFO | Prepared 'dim_date' with 365 rows and 14 columns.
+2026-04-24 09:15:58,941 | orchestration.pipeline_orchestrator | INFO | Completed step: transform dimension tables (0.06s)
+2026-04-24 09:15:58,941 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for dimensions
+2026-04-24 09:15:58,941 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_customers' because it is empty.
+2026-04-24 09:15:58,942 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_products' because it is empty.
+2026-04-24 09:15:58,942 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_locations' because it is empty.
+2026-04-24 09:15:58,942 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-24 09:15:58,942 | transformers.base_transformer | INFO | Shape: rows=365, columns=14
+2026-04-24 09:15:58,960 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 365 entries, 0 to 364
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   date_key        365 non-null    int64 
+ 1   full_date       365 non-null    object
+ 2   year            365 non-null    int32 
+ 3   quarter         365 non-null    int32 
+ 4   month           365 non-null    int32 
+ 5   month_name      365 non-null    str   
+ 6   week            365 non-null    int64 
+ 7   day_of_month    365 non-null    int32 
+ 8   day_of_week     365 non-null    int32 
+ 9   day_name        365 non-null    str   
+ 10  is_weekend      365 non-null    bool  
+ 11  is_holiday      365 non-null    bool  
+ 12  fiscal_year     365 non-null    int32 
+ 13  fiscal_quarter  365 non-null    int32 
+dtypes: bool(2), int32(7), int64(2), object(1), str(2)
+memory usage: 29.8+ KB
+
+2026-04-24 09:15:58,962 | orchestration.pipeline_orchestrator | INFO | Data quality summary for 'dim_date': {'table_name': 'dim_date', 'row_count': 365, 'column_count': 14, 'null_counts': {}, 'duplicate_count': 0, 'date_validation': {}, 'amount_validation': {}}
+2026-04-24 09:15:58,963 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for dimensions (0.02s)
+2026-04-24 09:15:58,963 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for facts
+2026-04-24 09:15:58,963 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_orders' because it is empty.
+2026-04-24 09:15:58,963 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_order_items' because it is empty.
+2026-04-24 09:15:58,963 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_payments' because it is empty.
+2026-04-24 09:15:58,963 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_cart_events' because it is empty.
+2026-04-24 09:15:58,964 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_bank_transactions' because it is empty.
+2026-04-24 09:15:58,964 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for facts (0.00s)
+2026-04-24 09:15:58,964 | orchestration.pipeline_orchestrator | INFO | Starting step: load dimension tables
+2026-04-24 09:15:58,964 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_customers' because it is empty.
+2026-04-24 09:15:58,964 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_products' because it is empty.
+2026-04-24 09:15:58,964 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_locations' because it is empty.
+2026-04-24 09:16:00,132 | loaders.bigquery_loader | INFO | Dataset 'anh27tuan02:Ancestry' already exists.
+2026-04-24 09:16:00,133 | loaders.bigquery_loader | INFO | Starting load job for table 'anh27tuan02.Ancestry.dim_date' with write_disposition='WRITE_TRUNCATE'.
+2026-04-24 09:16:04,503 | loaders.bigquery_loader | INFO | Loaded 365 rows into 'anh27tuan02.Ancestry.dim_date'.
+2026-04-24 09:16:04,503 | orchestration.pipeline_orchestrator | INFO | Completed step: load dimension tables (5.54s)
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | INFO | Starting step: load fact tables
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_orders' because it is empty.
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_order_items' because it is empty.
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_payments' because it is empty.
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_cart_events' because it is empty.
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_bank_transactions' because it is empty.
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | INFO | Completed step: load fact tables (0.00s)
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | WARNING | Skipping aggregate update because dim_customers or fact_orders is empty.
+2026-04-24 09:16:04,504 | orchestration.pipeline_orchestrator | INFO | Starting step: create analysis views
+2026-04-24 09:16:05,261 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:16:06,740 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:16:07,910 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:16:09,238 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:16:10,000 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:16:11,599 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:16:11,599 | orchestration.pipeline_orchestrator | INFO | Completed step: create analysis views (7.10s)
+2026-04-24 09:16:11,600 | orchestration.pipeline_orchestrator | INFO | Pipeline completed successfully. Summary: {'dim_customers': 0, 'dim_products': 0, 'dim_locations': 0, 'dim_date': 365, 'fact_orders': 0, 'fact_order_items': 0, 'fact_payments': 0, 'fact_cart_events': 0, 'fact_bank_transactions': 0, 'dim_customers_aggregate_updates': 0, 'analysis_views': 3}
+2026-04-24 09:27:33,658 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:27:33,658 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:27:35,970 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 2920
+2026-04-24 09:27:36,337 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:27:37,692 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 5600000
+2026-04-24 09:27:38,061 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:27:39,295 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 888000
+2026-04-24 09:27:39,704 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:27:40,972 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 24080000
+2026-04-24 09:27:41,338 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:27:42,603 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 40000
+2026-04-24 09:32:43,190 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:32:43,190 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:32:45,374 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 2920
+2026-04-24 09:32:45,750 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:32:47,314 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 5600000
+2026-04-24 09:32:47,735 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:32:49,073 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 888000
+2026-04-24 09:32:49,487 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:32:50,791 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 24080000
+2026-04-24 09:32:51,231 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:32:52,596 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 40000
+2026-04-24 09:34:01,656 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:34:01,656 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-24 09:34:01,680 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-24 09:34:01,684 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-24 09:34:01,694 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-24 09:34:01,705 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:01,794 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:34:01,809 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:01,814 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 12)
+2026-04-24 09:34:01,837 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:34:01,866 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:01,896 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:34:01,928 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:01,949 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:01,957 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:01,962 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 10)
+2026-04-24 09:34:01,980 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:34:01,987 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:01,990 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 8)
+2026-04-24 09:34:02,004 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:34:02,025 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:34:02,048 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:34:02,055 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-24 09:34:02,055 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-24 09:34:02,087 | transformers.base_transformer | INFO | --- Data Quality check: dim_customers ---
+2026-04-24 09:34:02,087 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:34:02,091 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   customer_id         2 non-null      Int64              
+ 1   email               2 non-null      string             
+ 2   full_name           2 non-null      string             
+ 3   phone               1 non-null      string             
+ 4   city                2 non-null      string             
+ 5   country             2 non-null      string             
+ 6   created_at          2 non-null      datetime64[us, UTC]
+ 7   customer_segment    2 non-null      string             
+ 8   lifetime_value_vnd  2 non-null      float64            
+ 9   total_orders        2 non-null      Int64              
+ 10  first_order_date    0 non-null      datetime64[s]      
+ 11  last_order_date     0 non-null      datetime64[s]      
+dtypes: Int64(2), datetime64[s](2), datetime64[us, UTC](1), float64(1), string(6)
+memory usage: 424.0 bytes
+
+2026-04-24 09:34:02,094 | transformers.base_transformer | INFO | --- Data Quality check: dim_products ---
+2026-04-24 09:34:02,094 | transformers.base_transformer | INFO | Shape: rows=2, columns=10
+2026-04-24 09:34:02,098 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   product_id      2 non-null      Int64  
+ 1   product_name    2 non-null      string 
+ 2   sku             2 non-null      string 
+ 3   barcode         2 non-null      string 
+ 4   category        2 non-null      string 
+ 5   brand           2 non-null      string 
+ 6   price_vnd       2 non-null      int64  
+ 7   price_usd       2 non-null      float64
+ 8   stock_quantity  2 non-null      Int64  
+ 9   is_active       2 non-null      boolean
+dtypes: Int64(2), boolean(1), float64(1), int64(1), string(5)
+memory usage: 368.0 bytes
+
+2026-04-24 09:34:02,102 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-24 09:34:02,102 | transformers.base_transformer | INFO | Shape: rows=6, columns=14
+2026-04-24 09:34:02,108 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   date_key        6 non-null      int64 
+ 1   full_date       6 non-null      object
+ 2   year            6 non-null      int32 
+ 3   quarter         6 non-null      int32 
+ 4   month           6 non-null      int32 
+ 5   month_name      6 non-null      str   
+ 6   week            6 non-null      int64 
+ 7   day_of_month    6 non-null      int32 
+ 8   day_of_week     6 non-null      int32 
+ 9   day_name        6 non-null      str   
+ 10  is_weekend      6 non-null      bool  
+ 11  is_holiday      6 non-null      bool  
+ 12  fiscal_year     6 non-null      int32 
+ 13  fiscal_quarter  6 non-null      int32 
+dtypes: bool(2), int32(7), int64(2), object(1), str(2)
+memory usage: 625.0+ bytes
+
+2026-04-24 09:34:02,111 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:34:02,111 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:34:02,117 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column          Non-Null Count  Dtype              
+---  ------          --------------  -----              
+ 0   order_key       2 non-null      str                
+ 1   order_id        2 non-null      string             
+ 2   transaction_id  2 non-null      string             
+ 3   customer_id     2 non-null      Int64              
+ 4   order_date_key  2 non-null      object             
+ 5   order_date      2 non-null      datetime64[us, UTC]
+ 6   channel         2 non-null      string             
+ 7   source          2 non-null      string             
+ 8   status          2 non-null      string             
+ 9   payment_status  2 non-null      string             
+ 10  total_vnd       2 non-null      int64              
+ 11  total_usd       2 non-null      float64            
+dtypes: Int64(1), datetime64[us, UTC](1), float64(1), int64(1), object(1), str(1), string(6)
+memory usage: 447.0+ bytes
+
+2026-04-24 09:34:02,124 | transformers.base_transformer | INFO | --- Data Quality check: fact_order_items ---
+2026-04-24 09:34:02,124 | transformers.base_transformer | INFO | Shape: rows=3, columns=8
+2026-04-24 09:34:02,128 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   order_item_key  3 non-null      str    
+ 1   order_key       3 non-null      string 
+ 2   transaction_id  3 non-null      string 
+ 3   product_id      3 non-null      Int64  
+ 4   order_date_key  3 non-null      object 
+ 5   quantity        3 non-null      float64
+ 6   unit_price_vnd  3 non-null      float64
+ 7   line_total_vnd  3 non-null      float64
+dtypes: Int64(1), float64(3), object(1), str(1), string(2)
+memory usage: 477.0+ bytes
+
+2026-04-24 09:34:02,133 | transformers.base_transformer | INFO | --- Data Quality check: fact_payments ---
+2026-04-24 09:34:02,133 | transformers.base_transformer | INFO | Shape: rows=1, columns=10
+2026-04-24 09:34:02,137 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 10 columns):
+ #   Column            Non-Null Count  Dtype              
+---  ------            --------------  -----              
+ 0   payment_key       1 non-null      str                
+ 1   transaction_id    1 non-null      string             
+ 2   order_id          1 non-null      string             
+ 3   customer_id       1 non-null      Int64              
+ 4   payment_gateway   1 non-null      string             
+ 5   payment_method    1 non-null      string             
+ 6   amount_vnd        1 non-null      int64              
+ 7   payment_status    1 non-null      string             
+ 8   payment_date_key  1 non-null      object             
+ 9   payment_date      1 non-null      datetime64[us, UTC]
+dtypes: Int64(1), datetime64[us, UTC](1), int64(1), object(1), str(1), string(5)
+memory usage: 262.0+ bytes
+
+2026-04-24 09:34:02,142 | transformers.base_transformer | INFO | --- Data Quality check: fact_cart_events ---
+2026-04-24 09:34:02,142 | transformers.base_transformer | INFO | Shape: rows=1, columns=13
+2026-04-24 09:34:02,147 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 13 columns):
+ #   Column           Non-Null Count  Dtype              
+---  ------           --------------  -----              
+ 0   event_key        1 non-null      str                
+ 1   event_id         1 non-null      string             
+ 2   session_id       1 non-null      string             
+ 3   customer_id      1 non-null      Int64              
+ 4   event_type       1 non-null      string             
+ 5   event_date_key   1 non-null      object             
+ 6   event_timestamp  1 non-null      datetime64[us, UTC]
+ 7   product_id       1 non-null      Int64              
+ 8   source           1 non-null      string             
+ 9   device           1 non-null      string             
+ 10  browser          1 non-null      string             
+ 11  utm_source       1 non-null      string             
+ 12  utm_campaign     1 non-null      string             
+dtypes: Int64(2), datetime64[us, UTC](1), object(1), str(1), string(8)
+memory usage: 307.0+ bytes
+
+2026-04-24 09:34:16,888 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:34:16,888 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-24 09:34:16,894 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-24 09:34:16,896 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-24 09:34:16,901 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-24 09:34:16,906 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:16,955 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:34:16,965 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:16,969 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 12)
+2026-04-24 09:34:16,995 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:34:17,021 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:17,045 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:34:17,071 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:17,089 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:17,099 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:17,101 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 10)
+2026-04-24 09:34:17,117 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:34:17,124 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-24 09:34:17,128 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 8)
+2026-04-24 09:34:17,142 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-24 09:34:17,163 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-24 09:34:17,181 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-24 09:34:17,185 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-24 09:34:17,185 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-24 09:34:17,206 | transformers.base_transformer | INFO | --- Data Quality check: dim_customers ---
+2026-04-24 09:34:17,206 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:34:17,210 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   customer_id         2 non-null      Int64              
+ 1   email               2 non-null      string             
+ 2   full_name           2 non-null      string             
+ 3   phone               1 non-null      string             
+ 4   city                2 non-null      string             
+ 5   country             2 non-null      string             
+ 6   created_at          2 non-null      datetime64[us, UTC]
+ 7   customer_segment    2 non-null      string             
+ 8   lifetime_value_vnd  2 non-null      float64            
+ 9   total_orders        2 non-null      Int64              
+ 10  first_order_date    0 non-null      datetime64[s]      
+ 11  last_order_date     0 non-null      datetime64[s]      
+dtypes: Int64(2), datetime64[s](2), datetime64[us, UTC](1), float64(1), string(6)
+memory usage: 424.0 bytes
+
+2026-04-24 09:34:17,212 | transformers.base_transformer | INFO | --- Data Quality check: dim_products ---
+2026-04-24 09:34:17,212 | transformers.base_transformer | INFO | Shape: rows=2, columns=10
+2026-04-24 09:34:17,217 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   product_id      2 non-null      Int64  
+ 1   product_name    2 non-null      string 
+ 2   sku             2 non-null      string 
+ 3   barcode         2 non-null      string 
+ 4   category        2 non-null      string 
+ 5   brand           2 non-null      string 
+ 6   price_vnd       2 non-null      int64  
+ 7   price_usd       2 non-null      float64
+ 8   stock_quantity  2 non-null      Int64  
+ 9   is_active       2 non-null      boolean
+dtypes: Int64(2), boolean(1), float64(1), int64(1), string(5)
+memory usage: 368.0 bytes
+
+2026-04-24 09:34:17,219 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-24 09:34:17,219 | transformers.base_transformer | INFO | Shape: rows=6, columns=14
+2026-04-24 09:34:17,223 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   date_key        6 non-null      int64 
+ 1   full_date       6 non-null      object
+ 2   year            6 non-null      int32 
+ 3   quarter         6 non-null      int32 
+ 4   month           6 non-null      int32 
+ 5   month_name      6 non-null      str   
+ 6   week            6 non-null      int64 
+ 7   day_of_month    6 non-null      int32 
+ 8   day_of_week     6 non-null      int32 
+ 9   day_name        6 non-null      str   
+ 10  is_weekend      6 non-null      bool  
+ 11  is_holiday      6 non-null      bool  
+ 12  fiscal_year     6 non-null      int32 
+ 13  fiscal_quarter  6 non-null      int32 
+dtypes: bool(2), int32(7), int64(2), object(1), str(2)
+memory usage: 625.0+ bytes
+
+2026-04-24 09:34:17,225 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-24 09:34:17,226 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-24 09:34:17,229 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column          Non-Null Count  Dtype              
+---  ------          --------------  -----              
+ 0   order_key       2 non-null      str                
+ 1   order_id        2 non-null      string             
+ 2   transaction_id  2 non-null      string             
+ 3   customer_id     2 non-null      Int64              
+ 4   order_date_key  2 non-null      object             
+ 5   order_date      2 non-null      datetime64[us, UTC]
+ 6   channel         2 non-null      string             
+ 7   source          2 non-null      string             
+ 8   status          2 non-null      string             
+ 9   payment_status  2 non-null      string             
+ 10  total_vnd       2 non-null      int64              
+ 11  total_usd       2 non-null      float64            
+dtypes: Int64(1), datetime64[us, UTC](1), float64(1), int64(1), object(1), str(1), string(6)
+memory usage: 447.0+ bytes
+
+2026-04-24 09:34:17,238 | transformers.base_transformer | INFO | --- Data Quality check: fact_order_items ---
+2026-04-24 09:34:17,238 | transformers.base_transformer | INFO | Shape: rows=3, columns=8
+2026-04-24 09:34:17,244 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   order_item_key  3 non-null      str    
+ 1   order_key       3 non-null      string 
+ 2   transaction_id  3 non-null      string 
+ 3   product_id      3 non-null      Int64  
+ 4   order_date_key  3 non-null      object 
+ 5   quantity        3 non-null      float64
+ 6   unit_price_vnd  3 non-null      float64
+ 7   line_total_vnd  3 non-null      float64
+dtypes: Int64(1), float64(3), object(1), str(1), string(2)
+memory usage: 477.0+ bytes
+
+2026-04-24 09:34:17,250 | transformers.base_transformer | INFO | --- Data Quality check: fact_payments ---
+2026-04-24 09:34:17,250 | transformers.base_transformer | INFO | Shape: rows=1, columns=10
+2026-04-24 09:34:17,254 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 10 columns):
+ #   Column            Non-Null Count  Dtype              
+---  ------            --------------  -----              
+ 0   payment_key       1 non-null      str                
+ 1   transaction_id    1 non-null      string             
+ 2   order_id          1 non-null      string             
+ 3   customer_id       1 non-null      Int64              
+ 4   payment_gateway   1 non-null      string             
+ 5   payment_method    1 non-null      string             
+ 6   amount_vnd        1 non-null      int64              
+ 7   payment_status    1 non-null      string             
+ 8   payment_date_key  1 non-null      object             
+ 9   payment_date      1 non-null      datetime64[us, UTC]
+dtypes: Int64(1), datetime64[us, UTC](1), int64(1), object(1), str(1), string(5)
+memory usage: 262.0+ bytes
+
+2026-04-24 09:34:17,259 | transformers.base_transformer | INFO | --- Data Quality check: fact_cart_events ---
+2026-04-24 09:34:17,259 | transformers.base_transformer | INFO | Shape: rows=1, columns=13
+2026-04-24 09:34:17,263 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 13 columns):
+ #   Column           Non-Null Count  Dtype              
+---  ------           --------------  -----              
+ 0   event_key        1 non-null      str                
+ 1   event_id         1 non-null      string             
+ 2   session_id       1 non-null      string             
+ 3   customer_id      1 non-null      Int64              
+ 4   event_type       1 non-null      string             
+ 5   event_date_key   1 non-null      object             
+ 6   event_timestamp  1 non-null      datetime64[us, UTC]
+ 7   product_id       1 non-null      Int64              
+ 8   source           1 non-null      string             
+ 9   device           1 non-null      string             
+ 10  browser          1 non-null      string             
+ 11  utm_source       1 non-null      string             
+ 12  utm_campaign     1 non-null      string             
+dtypes: Int64(2), datetime64[us, UTC](1), object(1), str(1), string(8)
+memory usage: 307.0+ bytes
+
+2026-04-24 09:34:38,765 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:34:38,767 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:34:40,797 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:34:41,639 | loaders.bigquery_loader | INFO | Dataset 'anh27tuan02:Ancestry' already exists.
+2026-04-24 09:34:41,639 | loaders.bigquery_loader | INFO | Starting load job for table 'anh27tuan02.Ancestry.dim_date' with write_disposition='WRITE_TRUNCATE'.
+2026-04-24 09:34:45,779 | loaders.bigquery_loader | INFO | Loaded 366 rows into 'anh27tuan02.Ancestry.dim_date'.
+2026-04-24 09:34:45,780 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:34:46,964 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 2928
+2026-04-24 09:38:55,982 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:38:57,017 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:38:57,887 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:38:59,151 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:39:00,281 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:39:01,432 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:39:02,848 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:39:04,067 | extractors.base_extractor | INFO | Successfully connected to GCS bucket: tuan27
+2026-04-24 09:39:04,067 | orchestration.pipeline_orchestrator | INFO | Starting pipeline orchestration for bucket 'tuan27' and dataset 'Ancestry'.
+2026-04-24 09:39:04,067 | orchestration.pipeline_orchestrator | INFO | Starting step: extract source data
+2026-04-24 09:39:04,296 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-24 09:39:04,297 | extractors.base_extractor | WARNING | No customer batch naming pattern matched under 'shared/customers/'. Falling back to all JSON files.
+2026-04-24 09:39:04,514 | extractors.base_extractor | INFO | Found 0 files with prefix 'shared/customers/'
+2026-04-24 09:39:04,514 | extractors.base_extractor | INFO | Found 0 customer batch files
+2026-04-24 09:39:04,737 | extractors.base_extractor | ERROR | Error extracting 'shared/products.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fproducts.json.gz?alt=media: No such object: tuan27/shared/products.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:04,959 | extractors.base_extractor | ERROR | Error extracting 'shared/sapo_locations.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/shared%2Fsapo_locations.json.gz?alt=media: No such object: tuan27/shared/sapo_locations.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:05,177 | extractors.base_extractor | INFO | Found 0 files with prefix 'shopify/'
+2026-04-24 09:39:05,408 | extractors.base_extractor | INFO | Found 0 files with prefix 'sapo/'
+2026-04-24 09:39:05,408 | extractors.base_extractor | WARNING | No Sapo order files matched the expected naming pattern under 'sapo/'.
+2026-04-24 09:39:05,628 | extractors.base_extractor | ERROR | Error extracting 'online_orders/online_orders.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/online_orders%2Fonline_orders.json.gz?alt=media: No such object: tuan27/online_orders/online_orders.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:05,857 | extractors.base_extractor | ERROR | Error extracting 'cart_tracking/cart_events.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/cart_tracking%2Fcart_events.json.gz?alt=media: No such object: tuan27/cart_tracking/cart_events.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:06,073 | extractors.base_extractor | ERROR | Error extracting 'mercury/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/mercury%2Ftransactions.json.gz?alt=media: No such object: tuan27/mercury/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:06,287 | extractors.base_extractor | ERROR | Error extracting 'momo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/momo%2Ftransactions.json.gz?alt=media: No such object: tuan27/momo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:06,506 | extractors.base_extractor | ERROR | Error extracting 'odoo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/odoo%2Ftransactions.json.gz?alt=media: No such object: tuan27/odoo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:06,738 | extractors.base_extractor | ERROR | Error extracting 'paypal/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/paypal%2Ftransactions.json.gz?alt=media: No such object: tuan27/paypal/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:06,953 | extractors.base_extractor | ERROR | Error extracting 'sapo/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/sapo%2Ftransactions.json.gz?alt=media: No such object: tuan27/sapo/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:07,167 | extractors.base_extractor | ERROR | Error extracting 'zalopay/transactions.json.gz': 404 GET https://storage.googleapis.com/download/storage/v1/b/tuan27/o/zalopay%2Ftransactions.json.gz?alt=media: No such object: tuan27/zalopay/transactions.json.gz: ('Request failed with status code', 404, 'Expected one of', <HTTPStatus.OK: 200>, <HTTPStatus.PARTIAL_CONTENT: 206>)
+2026-04-24 09:39:07,167 | orchestration.pipeline_orchestrator | INFO | Prepared 'customers' with 0 rows and 0 columns.
+2026-04-24 09:39:07,168 | orchestration.pipeline_orchestrator | INFO | Prepared 'products' with 0 rows and 0 columns.
+2026-04-24 09:39:07,168 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_locations' with 0 rows and 0 columns.
+2026-04-24 09:39:07,168 | orchestration.pipeline_orchestrator | INFO | Prepared 'shopify_orders' with 0 rows and 0 columns.
+2026-04-24 09:39:07,168 | orchestration.pipeline_orchestrator | INFO | Prepared 'sapo_orders' with 0 rows and 0 columns.
+2026-04-24 09:39:07,169 | orchestration.pipeline_orchestrator | INFO | Prepared 'online_orders' with 0 rows and 0 columns.
+2026-04-24 09:39:07,169 | orchestration.pipeline_orchestrator | INFO | Prepared 'cart_events' with 0 rows and 0 columns.
+2026-04-24 09:39:07,169 | orchestration.pipeline_orchestrator | INFO | Prepared 'bank_transactions' with 0 rows and 0 columns.
+2026-04-24 09:39:07,169 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.momo' with 0 rows and 0 columns.
+2026-04-24 09:39:07,169 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.odoo' with 0 rows and 0 columns.
+2026-04-24 09:39:07,169 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.paypal' with 0 rows and 0 columns.
+2026-04-24 09:39:07,169 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.sapo' with 0 rows and 0 columns.
+2026-04-24 09:39:07,170 | orchestration.pipeline_orchestrator | INFO | Prepared 'payments_by_gateway.zalopay' with 0 rows and 0 columns.
+2026-04-24 09:39:07,170 | orchestration.pipeline_orchestrator | INFO | Completed step: extract source data (3.10s)
+2026-04-24 09:39:07,171 | orchestration.pipeline_orchestrator | INFO | Starting step: transform fact tables
+2026-04-24 09:39:07,172 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_shopify' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,180 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_sapo' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,183 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_orders_online' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,184 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_shopify' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,185 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_sapo' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,186 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_order_items_online' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,187 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_momo' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,188 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_odoo' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,189 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_paypal' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,190 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_sapo' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,191 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_payments_zalopay' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,192 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_cart_events' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,193 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'fact_bank_transactions' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,194 | orchestration.pipeline_orchestrator | INFO | Completed step: transform fact tables (0.02s)
+2026-04-24 09:39:07,195 | orchestration.pipeline_orchestrator | INFO | Starting step: transform dimension tables
+2026-04-24 09:39:07,195 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_customers' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,197 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_products' is empty. Returning an empty table shape.
+2026-04-24 09:39:07,198 | orchestration.pipeline_orchestrator | WARNING | Source DataFrame for 'dim_locations' is empty. Returning an empty table shape.
+2026-04-24 09:39:09,604 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:39:11,104 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 30608000
+2026-04-24 09:39:11,504 | orchestration.pipeline_orchestrator | INFO | Derived dim_date range from warehouse facts: 2025-01-06 to 2026-01-06.
+2026-04-24 09:39:11,513 | orchestration.pipeline_orchestrator | INFO | Prepared 'dim_date' with 366 rows and 14 columns.
+2026-04-24 09:39:11,513 | orchestration.pipeline_orchestrator | INFO | Completed step: transform dimension tables (4.32s)
+2026-04-24 09:39:11,514 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for dimensions
+2026-04-24 09:39:11,515 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_customers' because it is empty.
+2026-04-24 09:39:11,515 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_products' because it is empty.
+2026-04-24 09:39:11,515 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'dim_locations' because it is empty.
+2026-04-24 09:39:11,516 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-24 09:39:11,516 | transformers.base_transformer | INFO | Shape: rows=366, columns=14
+2026-04-24 09:39:11,524 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 366 entries, 0 to 365
+Data columns (total 14 columns):
+ #   Column          Non-Null Count  Dtype 
+---  ------          --------------  ----- 
+ 0   date_key        366 non-null    int64 
+ 1   full_date       366 non-null    object
+ 2   year            366 non-null    int32 
+ 3   quarter         366 non-null    int32 
+ 4   month           366 non-null    int32 
+ 5   month_name      366 non-null    str   
+ 6   week            366 non-null    int64 
+ 7   day_of_month    366 non-null    int32 
+ 8   day_of_week     366 non-null    int32 
+ 9   day_name        366 non-null    str   
+ 10  is_weekend      366 non-null    bool  
+ 11  is_holiday      366 non-null    bool  
+ 12  fiscal_year     366 non-null    int32 
+ 13  fiscal_quarter  366 non-null    int32 
+dtypes: bool(2), int32(7), int64(2), object(1), str(2)
+memory usage: 29.9+ KB
+
+2026-04-24 09:39:11,526 | orchestration.pipeline_orchestrator | INFO | Data quality summary for 'dim_date': {'table_name': 'dim_date', 'row_count': 366, 'column_count': 14, 'null_counts': {}, 'duplicate_count': 0, 'date_validation': {}, 'amount_validation': {}}
+2026-04-24 09:39:11,527 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for dimensions (0.01s)
+2026-04-24 09:39:11,527 | orchestration.pipeline_orchestrator | INFO | Starting step: run data quality checks for facts
+2026-04-24 09:39:11,528 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_orders' because it is empty.
+2026-04-24 09:39:11,528 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_order_items' because it is empty.
+2026-04-24 09:39:11,528 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_payments' because it is empty.
+2026-04-24 09:39:11,528 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_cart_events' because it is empty.
+2026-04-24 09:39:11,528 | orchestration.pipeline_orchestrator | WARNING | Skipping data quality checks for 'fact_bank_transactions' because it is empty.
+2026-04-24 09:39:11,528 | orchestration.pipeline_orchestrator | INFO | Completed step: run data quality checks for facts (0.00s)
+2026-04-24 09:39:11,529 | orchestration.pipeline_orchestrator | INFO | Starting step: load dimension tables
+2026-04-24 09:39:11,529 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_customers' because it is empty.
+2026-04-24 09:39:11,529 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_products' because it is empty.
+2026-04-24 09:39:11,529 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'dim_locations' because it is empty.
+2026-04-24 09:39:11,924 | loaders.bigquery_loader | INFO | Dataset 'anh27tuan02:Ancestry' already exists.
+2026-04-24 09:39:11,924 | loaders.bigquery_loader | INFO | Starting load job for table 'anh27tuan02.Ancestry.dim_date' with write_disposition='WRITE_TRUNCATE'.
+2026-04-24 09:39:15,630 | loaders.bigquery_loader | INFO | Loaded 366 rows into 'anh27tuan02.Ancestry.dim_date'.
+2026-04-24 09:39:15,630 | orchestration.pipeline_orchestrator | INFO | Completed step: load dimension tables (4.10s)
+2026-04-24 09:39:15,631 | orchestration.pipeline_orchestrator | INFO | Starting step: load fact tables
+2026-04-24 09:39:15,631 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_orders' because it is empty.
+2026-04-24 09:39:15,631 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_order_items' because it is empty.
+2026-04-24 09:39:15,631 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_payments' because it is empty.
+2026-04-24 09:39:15,631 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_cart_events' because it is empty.
+2026-04-24 09:39:15,631 | orchestration.pipeline_orchestrator | WARNING | Skipping load for 'fact_bank_transactions' because it is empty.
+2026-04-24 09:39:15,631 | orchestration.pipeline_orchestrator | INFO | Completed step: load fact tables (0.00s)
+2026-04-24 09:39:15,632 | orchestration.pipeline_orchestrator | WARNING | Skipping aggregate update because dim_customers or fact_orders is empty.
+2026-04-24 09:39:15,632 | orchestration.pipeline_orchestrator | INFO | Starting step: create analysis views
+2026-04-24 09:39:16,391 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:39:17,730 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:39:18,828 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:39:20,069 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:39:20,893 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:39:22,121 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 0
+2026-04-24 09:39:22,121 | orchestration.pipeline_orchestrator | INFO | Completed step: create analysis views (6.49s)
+2026-04-24 09:39:22,122 | orchestration.pipeline_orchestrator | INFO | Pipeline completed successfully. Summary: {'dim_customers': 0, 'dim_products': 0, 'dim_locations': 0, 'dim_date': 366, 'fact_orders': 0, 'fact_order_items': 0, 'fact_payments': 0, 'fact_cart_events': 0, 'fact_bank_transactions': 0, 'dim_customers_aggregate_updates': 0, 'analysis_views': 3}
+2026-04-24 09:57:36,246 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 09:57:36,247 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:57:38,524 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 21688895
+2026-04-24 09:57:38,932 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:57:40,365 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 64745309
+2026-04-24 09:57:40,797 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:57:42,097 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 161417
+2026-04-24 09:57:42,698 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:57:43,975 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 112709355
+2026-04-24 09:57:44,384 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:57:46,548 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 86434204
+2026-04-24 09:57:46,940 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 09:57:48,444 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 46169102
+2026-04-24 18:41:22,213 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'anh27tuan02'.
+2026-04-24 18:41:22,217 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-24 18:41:25,233 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 10485760

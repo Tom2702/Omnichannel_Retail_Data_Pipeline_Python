@@ -1,0 +1,71 @@
+2026-04-15 10:19:21,032 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-15 10:19:21,036 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 4)
+2026-04-15 10:19:21,036 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-15 10:19:21,036 | transformers.base_transformer | INFO | Shape: rows=2, columns=7
+2026-04-15 10:19:21,049 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 7 columns):
+ #   Column          Non-Null Count  Dtype         
+---  ------          --------------  -----         
+ 0   created_at      1 non-null      datetime64[us]
+ 1   order_id        2 non-null      int64         
+ 2   transaction_id  2 non-null      str           
+ 3   amount_vnd      2 non-null      int64         
+ 4   line_items      2 non-null      object        
+ 5   order_date_key  1 non-null      object        
+ 6   order_key       2 non-null      str           
+dtypes: datetime64[us](1), int64(2), object(2), str(2)
+memory usage: 252.0+ bytes
+
+2026-04-15 10:19:21,050 | transformers.base_transformer | INFO | No NULL values found.
+2026-04-15 10:19:21,051 | transformers.base_transformer | WARNING | Found 1 duplicate rows.
+2026-04-15 10:19:21,051 | transformers.base_transformer | INFO | --- Date Range Validation ---
+2026-04-15 10:19:21,052 | transformers.base_transformer | INFO | Column 'created_at' - Date Range: 2026-01-01 00:00:00 to 2026-01-01 00:00:00
+2026-04-15 10:19:21,052 | transformers.base_transformer | INFO | --- Amount Validation ---
+2026-04-15 10:19:21,053 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-15 10:19:21,053 | transformers.base_transformer | INFO | Column 'amount_vnd' - Statistical Summary:
+2026-04-15 10:19:21,053 | transformers.base_transformer | INFO | Mean: 47.50
+2026-04-15 10:19:21,053 | transformers.base_transformer | INFO | Median: 47.50
+2026-04-15 10:19:21,054 | transformers.base_transformer | INFO | Std Dev: 74.25
+2026-04-15 10:19:21,054 | transformers.base_transformer | INFO | Min: -5.00
+2026-04-15 10:19:21,054 | transformers.base_transformer | INFO | Max: 100.00
+2026-04-15 10:19:21,056 | transformers.base_transformer | INFO | Column 'amount_vnd' has no significant outliers.
+2026-04-15 10:38:53,337 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-15 10:38:53,340 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (3, 4)
+2026-04-15 10:38:53,340 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-15 10:38:53,341 | transformers.base_transformer | INFO | Shape: rows=3, columns=8
+2026-04-15 10:38:53,358 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype         
+---  ------          --------------  -----         
+ 0   order_id        3 non-null      int64         
+ 1   transaction_id  3 non-null      str           
+ 2   customer_id     2 non-null      Int64         
+ 3   created_at      3 non-null      datetime64[us]
+ 4   amount_vnd      3 non-null      int64         
+ 5   line_items      3 non-null      object        
+ 6   order_date_key  3 non-null      object        
+ 7   order_key       3 non-null      str           
+dtypes: Int64(1), datetime64[us](1), int64(2), object(2), str(2)
+memory usage: 339.0+ bytes
+
+2026-04-15 10:38:53,361 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-15 10:38:53,364 | transformers.base_transformer | WARNING | Found 1 duplicate rows.
+2026-04-15 10:38:53,366 | transformers.base_transformer | INFO | Removed 1 duplicate rows.
+2026-04-15 10:38:53,366 | transformers.base_transformer | INFO | --- Date Range Validation ---
+2026-04-15 10:38:53,367 | transformers.base_transformer | INFO | Column 'created_at' - Date Range: 2026-04-01 00:00:00 to 2099-01-01 00:00:00
+2026-04-15 10:38:53,367 | transformers.base_transformer | WARNING | Column 'created_at' has 1 future dates (after 2026-04-15).
+2026-04-15 10:38:53,368 | transformers.base_transformer | INFO | --- Amount Validation ---
+2026-04-15 10:38:53,368 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-15 10:38:53,371 | transformers.base_transformer | INFO | Column 'amount_vnd' - Statistical Summary:
+2026-04-15 10:38:53,371 | transformers.base_transformer | INFO | Mean: 25000.00
+2026-04-15 10:38:53,371 | transformers.base_transformer | INFO | Median: 25000.00
+2026-04-15 10:38:53,371 | transformers.base_transformer | INFO | Std Dev: 106066.02
+2026-04-15 10:38:53,371 | transformers.base_transformer | INFO | Min: -50000.00
+2026-04-15 10:38:53,371 | transformers.base_transformer | INFO | Max: 100000.00
+2026-04-15 10:38:53,371 | transformers.base_transformer | INFO | Column 'amount_vnd' has no significant outliers.

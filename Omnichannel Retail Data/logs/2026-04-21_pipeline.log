@@ -1,0 +1,617 @@
+2026-04-21 22:26:21,346 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-21 22:26:21,346 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-21 22:26:21,372 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-21 22:26:21,374 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-21 22:26:21,384 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-21 22:26:21,394 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:27:31,341 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-21 22:27:31,341 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-21 22:27:31,346 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-21 22:27:31,348 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-21 22:27:31,352 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-21 22:27:31,356 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:30:17,900 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-21 22:30:17,909 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:30:17,913 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 11)
+2026-04-21 22:30:17,925 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:30:17,946 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:30:17,968 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-21 22:35:23,803 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:23,804 | loaders.bigquery_loader | INFO | Dataset 'test-project.analytics' not found. Creating it now.
+2026-04-21 22:35:23,804 | loaders.bigquery_loader | INFO | Created dataset 'test-project:analytics' in location 'US'.
+2026-04-21 22:35:23,805 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:23,806 | loaders.bigquery_loader | INFO | Dataset 'test-project:analytics' already exists.
+2026-04-21 22:35:23,807 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:23,807 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:35:23,807 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 1234
+2026-04-21 22:35:23,811 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:35:23,811 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 5678
+2026-04-21 22:35:23,813 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:23,816 | loaders.bigquery_loader | INFO | Starting load job for table 'test-project.analytics.fact_orders' with write_disposition='WRITE_TRUNCATE'.
+2026-04-21 22:35:23,816 | loaders.bigquery_loader | INFO | Applying daily partitioning on column 'order_date'.
+2026-04-21 22:35:23,816 | loaders.bigquery_loader | INFO | Applying clustering on columns: ['customer_id', 'channel']
+2026-04-21 22:35:23,817 | loaders.bigquery_loader | INFO | Loaded 2 rows into 'test-project.analytics.fact_orders'.
+2026-04-21 22:35:23,818 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:23,818 | loaders.bigquery_loader | WARNING | DataFrame for table 'analytics.fact_orders' is empty. Load job skipped.
+2026-04-21 22:35:23,819 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:23,821 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:23,823 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2274069991104'>' already exists.
+2026-04-21 22:35:23,824 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2274069991104'>' already exists.
+2026-04-21 22:35:40,156 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-21 22:35:40,157 | transformers.base_transformer | INFO | Shape: rows=3, columns=5
+2026-04-21 22:35:40,162 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column       Non-Null Count  Dtype  
+---  ------       --------------  -----  
+ 0   order_key    3 non-null      str    
+ 1   order_id     3 non-null      str    
+ 2   order_date   3 non-null      str    
+ 3   amount_vnd   3 non-null      int64  
+ 4   customer_id  2 non-null      float64
+dtypes: float64(1), int64(1), str(3)
+memory usage: 294.0 bytes
+
+2026-04-21 22:35:40,165 | transformers.base_transformer | WARNING | Found NULL values in columns:
+customer_id    1
+dtype: int64
+2026-04-21 22:35:40,171 | transformers.base_transformer | WARNING | Column 'amount_vnd' has 1 negative amounts.
+2026-04-21 22:35:40,176 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:35:46,305 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-21 22:35:46,313 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:35:46,316 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 11)
+2026-04-21 22:35:46,326 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:35:46,354 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:35:46,373 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-21 22:35:56,148 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:56,149 | loaders.bigquery_loader | INFO | Dataset 'test-project.analytics' not found. Creating it now.
+2026-04-21 22:35:56,149 | loaders.bigquery_loader | INFO | Created dataset 'test-project:analytics' in location 'US'.
+2026-04-21 22:35:56,152 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:56,152 | loaders.bigquery_loader | INFO | Dataset 'test-project:analytics' already exists.
+2026-04-21 22:35:56,153 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:56,157 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:35:56,157 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 1234
+2026-04-21 22:35:56,163 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:35:56,163 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 5678
+2026-04-21 22:35:56,165 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:56,168 | loaders.bigquery_loader | INFO | Starting load job for table 'test-project.analytics.fact_orders' with write_disposition='WRITE_TRUNCATE'.
+2026-04-21 22:35:56,168 | loaders.bigquery_loader | INFO | Applying daily partitioning on column 'order_date'.
+2026-04-21 22:35:56,169 | loaders.bigquery_loader | INFO | Applying clustering on columns: ['customer_id', 'channel']
+2026-04-21 22:35:56,169 | loaders.bigquery_loader | INFO | Loaded 2 rows into 'test-project.analytics.fact_orders'.
+2026-04-21 22:35:56,172 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:56,172 | loaders.bigquery_loader | WARNING | DataFrame for table 'analytics.fact_orders' is empty. Load job skipped.
+2026-04-21 22:35:56,173 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:56,174 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:35:56,175 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2573801519632'>' already exists.
+2026-04-21 22:35:56,176 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2573801519632'>' already exists.
+2026-04-21 22:37:33,014 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:33,030 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:33,037 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:33,041 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 10)
+2026-04-21 22:37:33,050 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:37:33,055 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:33,057 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 8)
+2026-04-21 22:37:33,064 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:37:33,080 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-21 22:37:33,096 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-21 22:37:33,100 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-21 22:37:33,100 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-21 22:37:33,122 | transformers.base_transformer | INFO | --- Data Quality check: dim_customers ---
+2026-04-21 22:37:33,122 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-21 22:37:33,127 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   customer_id         2 non-null      Int64              
+ 1   email               2 non-null      string             
+ 2   full_name           2 non-null      string             
+ 3   phone               1 non-null      string             
+ 4   city                2 non-null      string             
+ 5   country             2 non-null      string             
+ 6   created_at          2 non-null      datetime64[us, UTC]
+ 7   customer_segment    2 non-null      string             
+ 8   lifetime_value_vnd  2 non-null      float64            
+ 9   total_orders        2 non-null      Int64              
+ 10  first_order_date    0 non-null      datetime64[s]      
+ 11  last_order_date     0 non-null      datetime64[s]      
+dtypes: Int64(2), datetime64[s](2), datetime64[us, UTC](1), float64(1), string(6)
+memory usage: 424.0 bytes
+
+2026-04-21 22:37:33,129 | transformers.base_transformer | INFO | --- Data Quality check: dim_products ---
+2026-04-21 22:37:33,129 | transformers.base_transformer | INFO | Shape: rows=2, columns=10
+2026-04-21 22:37:33,132 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   product_id      2 non-null      Int64  
+ 1   product_name    2 non-null      string 
+ 2   sku             2 non-null      string 
+ 3   barcode         2 non-null      string 
+ 4   category        2 non-null      string 
+ 5   brand           2 non-null      string 
+ 6   price_vnd       2 non-null      int64  
+ 7   price_usd       2 non-null      float64
+ 8   stock_quantity  2 non-null      Int64  
+ 9   is_active       2 non-null      boolean
+dtypes: Int64(2), boolean(1), float64(1), int64(1), string(5)
+memory usage: 368.0 bytes
+
+2026-04-21 22:37:33,133 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-21 22:37:33,134 | transformers.base_transformer | INFO | Shape: rows=6, columns=13
+2026-04-21 22:37:33,137 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 13 columns):
+ #   Column          Non-Null Count  Dtype
+---  ------          --------------  -----
+ 0   date_key        6 non-null      int64
+ 1   year            6 non-null      int32
+ 2   quarter         6 non-null      int32
+ 3   month           6 non-null      int32
+ 4   month_name      6 non-null      str  
+ 5   week            6 non-null      int64
+ 6   day_of_month    6 non-null      int32
+ 7   day_of_week     6 non-null      int32
+ 8   day_name        6 non-null      str  
+ 9   is_weekend      6 non-null      bool 
+ 10  is_holiday      6 non-null      bool 
+ 11  fiscal_year     6 non-null      int32
+ 12  fiscal_quarter  6 non-null      int32
+dtypes: bool(2), int32(7), int64(2), str(2)
+memory usage: 577.0 bytes
+
+2026-04-21 22:37:33,139 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-21 22:37:33,139 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-21 22:37:33,142 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column          Non-Null Count  Dtype              
+---  ------          --------------  -----              
+ 0   order_key       2 non-null      str                
+ 1   order_id        2 non-null      string             
+ 2   transaction_id  2 non-null      string             
+ 3   customer_id     2 non-null      Int64              
+ 4   order_date_key  2 non-null      object             
+ 5   order_date      2 non-null      datetime64[us, UTC]
+ 6   channel         2 non-null      string             
+ 7   source          2 non-null      string             
+ 8   status          2 non-null      string             
+ 9   payment_status  2 non-null      string             
+ 10  total_vnd       2 non-null      int64              
+ 11  total_usd       2 non-null      float64            
+dtypes: Int64(1), datetime64[us, UTC](1), float64(1), int64(1), object(1), str(1), string(6)
+memory usage: 447.0+ bytes
+
+2026-04-21 22:37:46,895 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:46,912 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:46,920 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:46,924 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 10)
+2026-04-21 22:37:46,935 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:37:46,941 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:37:46,943 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 8)
+2026-04-21 22:37:46,952 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:37:46,966 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-21 22:37:46,985 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-21 22:37:46,988 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-21 22:37:46,988 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-21 22:37:47,009 | transformers.base_transformer | INFO | --- Data Quality check: dim_customers ---
+2026-04-21 22:37:47,009 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-21 22:37:47,013 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   customer_id         2 non-null      Int64              
+ 1   email               2 non-null      string             
+ 2   full_name           2 non-null      string             
+ 3   phone               1 non-null      string             
+ 4   city                2 non-null      string             
+ 5   country             2 non-null      string             
+ 6   created_at          2 non-null      datetime64[us, UTC]
+ 7   customer_segment    2 non-null      string             
+ 8   lifetime_value_vnd  2 non-null      float64            
+ 9   total_orders        2 non-null      Int64              
+ 10  first_order_date    0 non-null      datetime64[s]      
+ 11  last_order_date     0 non-null      datetime64[s]      
+dtypes: Int64(2), datetime64[s](2), datetime64[us, UTC](1), float64(1), string(6)
+memory usage: 424.0 bytes
+
+2026-04-21 22:37:47,015 | transformers.base_transformer | INFO | --- Data Quality check: dim_products ---
+2026-04-21 22:37:47,015 | transformers.base_transformer | INFO | Shape: rows=2, columns=10
+2026-04-21 22:37:47,020 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   product_id      2 non-null      Int64  
+ 1   product_name    2 non-null      string 
+ 2   sku             2 non-null      string 
+ 3   barcode         2 non-null      string 
+ 4   category        2 non-null      string 
+ 5   brand           2 non-null      string 
+ 6   price_vnd       2 non-null      int64  
+ 7   price_usd       2 non-null      float64
+ 8   stock_quantity  2 non-null      Int64  
+ 9   is_active       2 non-null      boolean
+dtypes: Int64(2), boolean(1), float64(1), int64(1), string(5)
+memory usage: 368.0 bytes
+
+2026-04-21 22:37:47,021 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-21 22:37:47,022 | transformers.base_transformer | INFO | Shape: rows=6, columns=13
+2026-04-21 22:37:47,026 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 13 columns):
+ #   Column          Non-Null Count  Dtype
+---  ------          --------------  -----
+ 0   date_key        6 non-null      int64
+ 1   year            6 non-null      int32
+ 2   quarter         6 non-null      int32
+ 3   month           6 non-null      int32
+ 4   month_name      6 non-null      str  
+ 5   week            6 non-null      int64
+ 6   day_of_month    6 non-null      int32
+ 7   day_of_week     6 non-null      int32
+ 8   day_name        6 non-null      str  
+ 9   is_weekend      6 non-null      bool 
+ 10  is_holiday      6 non-null      bool 
+ 11  fiscal_year     6 non-null      int32
+ 12  fiscal_quarter  6 non-null      int32
+dtypes: bool(2), int32(7), int64(2), str(2)
+memory usage: 577.0 bytes
+
+2026-04-21 22:37:47,028 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-21 22:37:47,028 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-21 22:37:47,032 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column          Non-Null Count  Dtype              
+---  ------          --------------  -----              
+ 0   order_key       2 non-null      str                
+ 1   order_id        2 non-null      string             
+ 2   transaction_id  2 non-null      string             
+ 3   customer_id     2 non-null      Int64              
+ 4   order_date_key  2 non-null      object             
+ 5   order_date      2 non-null      datetime64[us, UTC]
+ 6   channel         2 non-null      string             
+ 7   source          2 non-null      string             
+ 8   status          2 non-null      string             
+ 9   payment_status  2 non-null      string             
+ 10  total_vnd       2 non-null      int64              
+ 11  total_usd       2 non-null      float64            
+dtypes: Int64(1), datetime64[us, UTC](1), float64(1), int64(1), object(1), str(1), string(6)
+memory usage: 447.0+ bytes
+
+2026-04-21 22:37:47,039 | transformers.base_transformer | INFO | --- Data Quality check: fact_order_items ---
+2026-04-21 22:37:47,039 | transformers.base_transformer | INFO | Shape: rows=3, columns=8
+2026-04-21 22:37:47,041 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   order_item_key  3 non-null      str    
+ 1   order_key       3 non-null      string 
+ 2   transaction_id  3 non-null      string 
+ 3   product_id      3 non-null      Int64  
+ 4   order_date_key  3 non-null      object 
+ 5   quantity        3 non-null      float64
+ 6   unit_price_vnd  3 non-null      float64
+ 7   line_total_vnd  3 non-null      float64
+dtypes: Int64(1), float64(3), object(1), str(1), string(2)
+memory usage: 477.0+ bytes
+
+2026-04-21 22:37:47,045 | transformers.base_transformer | INFO | --- Data Quality check: fact_payments ---
+2026-04-21 22:37:47,045 | transformers.base_transformer | INFO | Shape: rows=1, columns=10
+2026-04-21 22:37:47,049 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 10 columns):
+ #   Column            Non-Null Count  Dtype              
+---  ------            --------------  -----              
+ 0   payment_key       1 non-null      str                
+ 1   transaction_id    1 non-null      string             
+ 2   order_id          1 non-null      string             
+ 3   customer_id       1 non-null      Int64              
+ 4   payment_gateway   1 non-null      string             
+ 5   payment_method    1 non-null      string             
+ 6   amount_vnd        1 non-null      int64              
+ 7   payment_status    1 non-null      string             
+ 8   payment_date_key  1 non-null      object             
+ 9   payment_date      1 non-null      datetime64[us, UTC]
+dtypes: Int64(1), datetime64[us, UTC](1), int64(1), object(1), str(1), string(5)
+memory usage: 261.0+ bytes
+
+2026-04-21 22:37:47,053 | transformers.base_transformer | INFO | --- Data Quality check: fact_cart_events ---
+2026-04-21 22:37:47,053 | transformers.base_transformer | INFO | Shape: rows=1, columns=13
+2026-04-21 22:37:47,057 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 13 columns):
+ #   Column           Non-Null Count  Dtype              
+---  ------           --------------  -----              
+ 0   event_key        1 non-null      str                
+ 1   event_id         1 non-null      string             
+ 2   session_id       1 non-null      string             
+ 3   customer_id      1 non-null      Int64              
+ 4   event_type       1 non-null      string             
+ 5   event_date_key   1 non-null      object             
+ 6   event_timestamp  1 non-null      datetime64[us, UTC]
+ 7   product_id       1 non-null      Int64              
+ 8   source           1 non-null      string             
+ 9   device           1 non-null      string             
+ 10  browser          1 non-null      string             
+ 11  utm_source       1 non-null      string             
+ 12  utm_campaign     1 non-null      string             
+dtypes: Int64(2), datetime64[us, UTC](1), object(1), str(1), string(8)
+memory usage: 307.0+ bytes
+
+2026-04-21 22:38:28,951 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:38:28,964 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:38:28,971 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:38:28,975 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (2, 10)
+2026-04-21 22:38:28,984 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:38:28,989 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_key'.
+2026-04-21 22:38:28,991 | transformers.base_transformer | INFO | Unflattening complete. Output shape: (1, 8)
+2026-04-21 22:38:28,999 | transformers.base_transformer | INFO | Successfully created surrogate key 'order_item_key'.
+2026-04-21 22:38:29,012 | transformers.base_transformer | INFO | Successfully created surrogate key 'payment_key'.
+2026-04-21 22:38:29,028 | transformers.base_transformer | INFO | Successfully created surrogate key 'event_key'.
+2026-04-21 22:38:29,031 | transformers.base_transformer | WARNING | Column 'first_order_date' missing. Added with null default.
+2026-04-21 22:38:29,032 | transformers.base_transformer | WARNING | Column 'last_order_date' missing. Added with null default.
+2026-04-21 22:38:29,051 | transformers.base_transformer | INFO | --- Data Quality check: dim_customers ---
+2026-04-21 22:38:29,051 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-21 22:38:29,055 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column              Non-Null Count  Dtype              
+---  ------              --------------  -----              
+ 0   customer_id         2 non-null      Int64              
+ 1   email               2 non-null      string             
+ 2   full_name           2 non-null      string             
+ 3   phone               1 non-null      string             
+ 4   city                2 non-null      string             
+ 5   country             2 non-null      string             
+ 6   created_at          2 non-null      datetime64[us, UTC]
+ 7   customer_segment    2 non-null      string             
+ 8   lifetime_value_vnd  2 non-null      float64            
+ 9   total_orders        2 non-null      Int64              
+ 10  first_order_date    0 non-null      datetime64[s]      
+ 11  last_order_date     0 non-null      datetime64[s]      
+dtypes: Int64(2), datetime64[s](2), datetime64[us, UTC](1), float64(1), string(6)
+memory usage: 424.0 bytes
+
+2026-04-21 22:38:29,065 | transformers.base_transformer | INFO | --- Data Quality check: dim_products ---
+2026-04-21 22:38:29,065 | transformers.base_transformer | INFO | Shape: rows=2, columns=10
+2026-04-21 22:38:29,068 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 10 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   product_id      2 non-null      Int64  
+ 1   product_name    2 non-null      string 
+ 2   sku             2 non-null      string 
+ 3   barcode         2 non-null      string 
+ 4   category        2 non-null      string 
+ 5   brand           2 non-null      string 
+ 6   price_vnd       2 non-null      int64  
+ 7   price_usd       2 non-null      float64
+ 8   stock_quantity  2 non-null      Int64  
+ 9   is_active       2 non-null      boolean
+dtypes: Int64(2), boolean(1), float64(1), int64(1), string(5)
+memory usage: 368.0 bytes
+
+2026-04-21 22:38:29,071 | transformers.base_transformer | INFO | --- Data Quality check: dim_date ---
+2026-04-21 22:38:29,071 | transformers.base_transformer | INFO | Shape: rows=6, columns=13
+2026-04-21 22:38:29,074 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 6 entries, 0 to 5
+Data columns (total 13 columns):
+ #   Column          Non-Null Count  Dtype
+---  ------          --------------  -----
+ 0   date_key        6 non-null      int64
+ 1   year            6 non-null      int32
+ 2   quarter         6 non-null      int32
+ 3   month           6 non-null      int32
+ 4   month_name      6 non-null      str  
+ 5   week            6 non-null      int64
+ 6   day_of_month    6 non-null      int32
+ 7   day_of_week     6 non-null      int32
+ 8   day_name        6 non-null      str  
+ 9   is_weekend      6 non-null      bool 
+ 10  is_holiday      6 non-null      bool 
+ 11  fiscal_year     6 non-null      int32
+ 12  fiscal_quarter  6 non-null      int32
+dtypes: bool(2), int32(7), int64(2), str(2)
+memory usage: 577.0 bytes
+
+2026-04-21 22:38:29,075 | transformers.base_transformer | INFO | --- Data Quality check: fact_orders ---
+2026-04-21 22:38:29,076 | transformers.base_transformer | INFO | Shape: rows=2, columns=12
+2026-04-21 22:38:29,079 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 2 entries, 0 to 1
+Data columns (total 12 columns):
+ #   Column          Non-Null Count  Dtype              
+---  ------          --------------  -----              
+ 0   order_key       2 non-null      str                
+ 1   order_id        2 non-null      string             
+ 2   transaction_id  2 non-null      string             
+ 3   customer_id     2 non-null      Int64              
+ 4   order_date_key  2 non-null      object             
+ 5   order_date      2 non-null      datetime64[us, UTC]
+ 6   channel         2 non-null      string             
+ 7   source          2 non-null      string             
+ 8   status          2 non-null      string             
+ 9   payment_status  2 non-null      string             
+ 10  total_vnd       2 non-null      int64              
+ 11  total_usd       2 non-null      float64            
+dtypes: Int64(1), datetime64[us, UTC](1), float64(1), int64(1), object(1), str(1), string(6)
+memory usage: 447.0+ bytes
+
+2026-04-21 22:38:29,084 | transformers.base_transformer | INFO | --- Data Quality check: fact_order_items ---
+2026-04-21 22:38:29,084 | transformers.base_transformer | INFO | Shape: rows=3, columns=8
+2026-04-21 22:38:29,087 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 8 columns):
+ #   Column          Non-Null Count  Dtype  
+---  ------          --------------  -----  
+ 0   order_item_key  3 non-null      str    
+ 1   order_key       3 non-null      string 
+ 2   transaction_id  3 non-null      string 
+ 3   product_id      3 non-null      Int64  
+ 4   order_date_key  3 non-null      object 
+ 5   quantity        3 non-null      float64
+ 6   unit_price_vnd  3 non-null      float64
+ 7   line_total_vnd  3 non-null      float64
+dtypes: Int64(1), float64(3), object(1), str(1), string(2)
+memory usage: 477.0+ bytes
+
+2026-04-21 22:38:29,091 | transformers.base_transformer | INFO | --- Data Quality check: fact_payments ---
+2026-04-21 22:38:29,091 | transformers.base_transformer | INFO | Shape: rows=1, columns=10
+2026-04-21 22:38:29,094 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 10 columns):
+ #   Column            Non-Null Count  Dtype              
+---  ------            --------------  -----              
+ 0   payment_key       1 non-null      str                
+ 1   transaction_id    1 non-null      string             
+ 2   order_id          1 non-null      string             
+ 3   customer_id       1 non-null      Int64              
+ 4   payment_gateway   1 non-null      string             
+ 5   payment_method    1 non-null      string             
+ 6   amount_vnd        1 non-null      int64              
+ 7   payment_status    1 non-null      string             
+ 8   payment_date_key  1 non-null      object             
+ 9   payment_date      1 non-null      datetime64[us, UTC]
+dtypes: Int64(1), datetime64[us, UTC](1), int64(1), object(1), str(1), string(5)
+memory usage: 261.0+ bytes
+
+2026-04-21 22:38:29,098 | transformers.base_transformer | INFO | --- Data Quality check: fact_cart_events ---
+2026-04-21 22:38:29,098 | transformers.base_transformer | INFO | Shape: rows=1, columns=13
+2026-04-21 22:38:29,101 | transformers.base_transformer | INFO | DataFrame info:
+<class 'pandas.DataFrame'>
+RangeIndex: 1 entries, 0 to 0
+Data columns (total 13 columns):
+ #   Column           Non-Null Count  Dtype              
+---  ------           --------------  -----              
+ 0   event_key        1 non-null      str                
+ 1   event_id         1 non-null      string             
+ 2   session_id       1 non-null      string             
+ 3   customer_id      1 non-null      Int64              
+ 4   event_type       1 non-null      string             
+ 5   event_date_key   1 non-null      object             
+ 6   event_timestamp  1 non-null      datetime64[us, UTC]
+ 7   product_id       1 non-null      Int64              
+ 8   source           1 non-null      string             
+ 9   device           1 non-null      string             
+ 10  browser          1 non-null      string             
+ 11  utm_source       1 non-null      string             
+ 12  utm_campaign     1 non-null      string             
+dtypes: Int64(2), datetime64[us, UTC](1), object(1), str(1), string(8)
+memory usage: 307.0+ bytes
+
+2026-04-21 22:38:39,315 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:38:39,316 | loaders.bigquery_loader | INFO | Dataset 'test-project.analytics' not found. Creating it now.
+2026-04-21 22:38:39,316 | loaders.bigquery_loader | INFO | Created dataset 'test-project:analytics' in location 'US'.
+2026-04-21 22:38:39,318 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:38:39,318 | loaders.bigquery_loader | INFO | Dataset 'test-project:analytics' already exists.
+2026-04-21 22:38:39,319 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:38:39,321 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:38:39,321 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 1234
+2026-04-21 22:38:39,326 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:38:39,326 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 5678
+2026-04-21 22:38:39,327 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:38:39,331 | loaders.bigquery_loader | INFO | Starting load job for table 'test-project.analytics.fact_orders' with write_disposition='WRITE_TRUNCATE'.
+2026-04-21 22:38:39,331 | loaders.bigquery_loader | INFO | Applying daily partitioning on column 'order_date'.
+2026-04-21 22:38:39,331 | loaders.bigquery_loader | INFO | Applying clustering on columns: ['customer_id', 'channel']
+2026-04-21 22:38:39,331 | loaders.bigquery_loader | INFO | Loaded 2 rows into 'test-project.analytics.fact_orders'.
+2026-04-21 22:38:39,333 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:38:39,333 | loaders.bigquery_loader | WARNING | DataFrame for table 'analytics.fact_orders' is empty. Load job skipped.
+2026-04-21 22:38:39,334 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:38:39,335 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:38:39,337 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2251954027024'>' already exists.
+2026-04-21 22:38:39,338 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2251954027024'>' already exists.
+2026-04-21 22:39:11,714 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:11,715 | loaders.bigquery_loader | INFO | Dataset 'test-project.analytics' not found. Creating it now.
+2026-04-21 22:39:11,715 | loaders.bigquery_loader | INFO | Created dataset 'test-project:analytics' in location 'US'.
+2026-04-21 22:39:11,716 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:11,716 | loaders.bigquery_loader | INFO | Dataset 'test-project:analytics' already exists.
+2026-04-21 22:39:11,717 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:11,717 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:39:11,717 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 1234
+2026-04-21 22:39:11,721 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:39:11,721 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 5678
+2026-04-21 22:39:11,723 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:11,729 | loaders.bigquery_loader | INFO | Starting load job for table 'test-project.analytics.fact_orders' with write_disposition='WRITE_TRUNCATE'.
+2026-04-21 22:39:11,729 | loaders.bigquery_loader | INFO | Applying daily partitioning on column 'order_date'.
+2026-04-21 22:39:11,729 | loaders.bigquery_loader | INFO | Applying clustering on columns: ['customer_id', 'channel']
+2026-04-21 22:39:11,729 | loaders.bigquery_loader | INFO | Loaded 2 rows into 'test-project.analytics.fact_orders'.
+2026-04-21 22:39:11,731 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:11,731 | loaders.bigquery_loader | WARNING | DataFrame for table 'analytics.fact_orders' is empty. Load job skipped.
+2026-04-21 22:39:11,732 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:11,733 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:11,734 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2659593528928'>' already exists.
+2026-04-21 22:39:11,734 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2659593528928'>' already exists.
+2026-04-21 22:39:54,440 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:54,441 | loaders.bigquery_loader | INFO | Dataset 'test-project.analytics' not found. Creating it now.
+2026-04-21 22:39:54,441 | loaders.bigquery_loader | INFO | Created dataset 'test-project:analytics' in location 'US'.
+2026-04-21 22:39:54,442 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:54,442 | loaders.bigquery_loader | INFO | Dataset 'test-project:analytics' already exists.
+2026-04-21 22:39:54,443 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:54,447 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:39:54,448 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 1234
+2026-04-21 22:39:54,452 | loaders.bigquery_loader | INFO | Executing BigQuery query.
+2026-04-21 22:39:54,452 | loaders.bigquery_loader | INFO | Query completed successfully. Bytes processed: 5678
+2026-04-21 22:39:54,454 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:54,457 | loaders.bigquery_loader | INFO | Starting load job for table 'test-project.analytics.fact_orders' with write_disposition='WRITE_TRUNCATE'.
+2026-04-21 22:39:54,457 | loaders.bigquery_loader | INFO | Applying daily partitioning on column 'order_date'.
+2026-04-21 22:39:54,458 | loaders.bigquery_loader | INFO | Applying clustering on columns: ['customer_id', 'channel']
+2026-04-21 22:39:54,458 | loaders.bigquery_loader | INFO | Loaded 2 rows into 'test-project.analytics.fact_orders'.
+2026-04-21 22:39:54,462 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:54,462 | loaders.bigquery_loader | WARNING | DataFrame for table 'analytics.fact_orders' is empty. Load job skipped.
+2026-04-21 22:39:54,464 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:54,465 | loaders.bigquery_loader | INFO | Initialized BigQuery client for project 'test-project'.
+2026-04-21 22:39:54,466 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2604074577472'>' already exists.
+2026-04-21 22:39:54,467 | loaders.bigquery_loader | INFO | Dataset '<MagicMock name='Client().get_dataset().full_dataset_id' id='2604074577472'>' already exists.
