@@ -203,7 +203,6 @@ These views are intended to reduce modeling effort in Power BI and keep business
 │   └── __init__.py
 ├── .env
 ├── main.py
-├── Project.pbix
 ├── README.md
 └── requirements.txt
 ```
@@ -276,42 +275,8 @@ python main.py `
   --write-disposition WRITE_TRUNCATE
 ```
 
-## 11. Validation and Testing
 
-### 11.1 Check Loaded Tables
-
-```powershell
-python check_bigquery_tables.py --dataset-id Ancestry
-```
-
-### 11.2 Run the Test Suite
-
-```powershell
-python -m unittest
-```
-
-The repository includes tests for:
-
-- extractors
-- transformer logic
-- BigQuery loader behavior
-- pipeline orchestration
-- integration-level table preparation
-
-## 12. Dashboard Outputs
-
-The repository includes a Power BI report file: `Project.pbix`
-
-The warehouse and views support dashboards such as:
-
-- customer journey analytics
-- funnel and conversion analysis
-- revenue and channel breakdowns
-- payment gateway performance
-- receivables and collection monitoring
-- cashflow and financial analytics
-
-## 13. Tech Stack
+## 11. Tech Stack
 
 - Python
 - pandas
@@ -323,9 +288,3 @@ The warehouse and views support dashboards such as:
 
 ---
 
-If you want, the next step I can help with is creating:
-
-- a shorter portfolio-style README
-- badges and screenshots for GitHub
-- a system architecture diagram image for the repo
-- a polished `.env.example` file to pair with this README
