@@ -114,9 +114,13 @@ The pipeline integrates multiple source families:
 - Customer segmentation logic maintained directly in the warehouse
 - Analysis-ready SQL views for journey, sankey flow, cashflow, and payment status reporting
 
-## 6. Warehouse Model
+## 6. Data Model
 
 The BigQuery warehouse follows a star-schema style design.
+
+<img width="1423" height="1310" alt="image" src="https://github.com/user-attachments/assets/24b48b49-5dc3-4457-ad6b-745bcbd39539" />
+
+Figure 3: Star Schema Data Model
 
 ### 6.1 Dimension Tables
 
