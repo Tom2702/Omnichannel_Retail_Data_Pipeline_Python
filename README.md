@@ -55,7 +55,7 @@ Raw files from all sources land in Google Cloud Storage (GCS) as the single sour
 
 ### 3.2 Medallion Architecture (ETL Flow)
 
-<img width="1086" height="1448" alt="image" src="https://github.com/user-attachments/assets/4b1a3ed8-3dd4-4098-91ef-a1a9057939b0" />
+<img width="1086" height="1449" alt="image" src="https://github.com/user-attachments/assets/b77191e4-b232-49bb-9d31-66515db7da03" />
 
 Figure 2: Data Transformation Pipeline (Bronze → Silver → Gold)
 
