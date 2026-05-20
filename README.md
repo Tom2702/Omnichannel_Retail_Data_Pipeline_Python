@@ -47,18 +47,8 @@ This project addresses that problem by creating a single analytics-ready warehou
 
 ## 3. Architecture and Design
 
-```mermaid
-flowchart LR
-    A["Raw files in Google Cloud Storage"] --> B["Source-specific Extractors"]
-    B --> C["Pandas Transform Layer"]
-    C --> D["Data Quality Checks"]
-    D --> E["BigQuery Fact & Dimension Tables"]
-    E --> F["Post-load Customer Aggregate Update"]
-    F --> G["Analysis Views"]
-    G --> H["Power BI Dashboard"]
-```
-
 ### 3.1 High-Level Architecture
+<img width="1916" height="821" alt="image" src="https://github.com/user-attachments/assets/84245742-35c4-4d9b-80f8-4e43c4e96710" />
 
 Figure 1: High-Level End-to-End Architecture
 
