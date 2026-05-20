@@ -171,7 +171,6 @@ After a successful pipeline run, the curated outputs are available in the `anh27
 | --- | --- | ---: |
 | `dim_customers` | Dimension | 100,000 |
 | `dim_products` | Dimension | 1,300 |
-| `dim_locations` | Dimension | 50 |
 | `dim_date` | Dimension | 366 |
 | `fact_orders` | Fact | 700,000 |
 | `fact_order_items` | Fact | 2,089,696 |
@@ -179,7 +178,35 @@ After a successful pipeline run, the curated outputs are available in the `anh27
 | `fact_cart_events` | Fact | 3,010,000 |
 | `fact_bank_transactions` | Fact | 5,000 |
 
-### 8.2 Reporting Views
+Figure 3: `dim_customers` table
+
+> Insert screenshot of the `dim_customers` table here.
+
+Figure 4: `dim_products` table
+
+> Insert screenshot of the `dim_products` table here.
+
+Figure 5: `fact_orders` table
+
+> Insert screenshot of the `fact_orders` table here.
+
+Figure 6: `fact_order_items` table
+
+> Insert screenshot of the `fact_order_items` table here.
+
+Figure 7: `fact_payments` table
+
+> Insert screenshot of the `fact_payments` table here.
+
+Figure 8: `fact_cart_events` table
+
+> Insert screenshot of the `fact_cart_events` table here.
+
+Figure 9: `fact_bank_transactions` table
+
+> Insert screenshot of the `fact_bank_transactions` table here.
+
+### 8.3 Reporting Views
 
 | View | Purpose |
 | --- | --- |
@@ -188,10 +215,17 @@ After a successful pipeline run, the curated outputs are available in the `anh27
 | `vw_cashflow_daily` | Daily revenue, payment, and bank cashflow rollup |
 | `vw_payment_status` | Payment status, outstanding amount, and collection delay tracking |
 
-### 8.3 Notes
+Figure 10: `vw_customer_journey` view
 
-- The snapshot above reflects the warehouse state verified on May 20, 2026.
-- Row counts may change when new raw files are added or when the pipeline is rerun.
+> Insert screenshot of the `vw_customer_journey` view here.
+
+Figure 11: `vw_cashflow_daily` view
+
+> Insert screenshot of the `vw_cashflow_daily` view here.
+
+Figure 12: `vw_payment_status` view
+
+> Insert screenshot of the `vw_payment_status` view here.
 
 ## 9. Repository Structure
 
