@@ -1,4 +1,4 @@
-# Omnichannel Retail Data Pipeline
+# Omnichannel Retail Data Pipeline | Python
 
 An end-to-end Python ELT project that consolidates omnichannel retail, payment, and customer-behavior data into a Google BigQuery warehouse for downstream analytics.
 
