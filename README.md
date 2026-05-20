@@ -180,31 +180,31 @@ After a successful pipeline run, the curated outputs are available in the `anh27
 
 <img width="3259" height="1601" alt="image" src="https://github.com/user-attachments/assets/622319aa-0413-437d-b95b-a72d291f861e" />
 
-Figure 3: `dim_customers` table
+Figure 4: `dim_customers` table
 
 <img width="2532" height="1543" alt="image" src="https://github.com/user-attachments/assets/6e7a854d-c84b-4158-8339-d7e06fa996b7" />
 
-Figure 4: `dim_products` table
+Figure 5: `dim_products` table
 
 <img width="3249" height="1568" alt="image" src="https://github.com/user-attachments/assets/82774db8-f7e9-4639-881c-ad5c501f6b9d" />
 
-Figure 5: `fact_orders` table
+Figure 6: `fact_orders` table
 
 <img width="3264" height="1616" alt="image" src="https://github.com/user-attachments/assets/c11e67fa-7d27-4ffa-8922-bddfb11e5abd" />
 
-Figure 6: `fact_order_items` table
+Figure 7: `fact_order_items` table
 
 <img width="3266" height="1622" alt="image" src="https://github.com/user-attachments/assets/17a3c369-a6b2-4745-ac23-14ac5149eaff" />
 
-Figure 7: `fact_payments` table
+Figure 8: `fact_payments` table
 
 <img width="3244" height="1611" alt="image" src="https://github.com/user-attachments/assets/1aabec72-f24d-441a-868a-67b60a324cbb" />
 
-Figure 8: `fact_cart_events` table
+Figure 9: `fact_cart_events` table
 
 <img width="3237" height="1616" alt="image" src="https://github.com/user-attachments/assets/9771037d-9f87-47e4-b43c-fe9f030e607c" />
 
-Figure 9: `fact_bank_transactions` table
+Figure 10: `fact_bank_transactions` table
 
 > Insert screenshot of the `fact_bank_transactions` table here.
 
@@ -219,15 +219,15 @@ Figure 9: `fact_bank_transactions` table
 
 <img width="2496" height="1530" alt="image" src="https://github.com/user-attachments/assets/2ffcf6d6-0b17-469e-869e-35f0499b8672" />
 
-Figure 10: `vw_customer_journey` view
+Figure 11: `vw_customer_journey` view
 
 <img width="2492" height="1508" alt="image" src="https://github.com/user-attachments/assets/ecb87725-24fc-480c-9909-00b5e0a8532d" />
 
-Figure 11: `vw_cashflow_daily` view
+Figure 12: `vw_cashflow_daily` view
 
 <img width="2499" height="1504" alt="image" src="https://github.com/user-attachments/assets/de3dff70-4889-4572-9741-0004a80cb40b" />
 
-Figure 12: `vw_payment_status` view
+Figure 13: `vw_payment_status` view
 
 ## 9. Repository Structure
 
