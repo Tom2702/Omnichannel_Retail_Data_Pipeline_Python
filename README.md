@@ -66,65 +66,7 @@ Raw files from all sources land in Google Cloud Storage (GCS) as the single sour
 
 ### 3.2 Medallion Architecture (ETL Flow)
 
-```mermaid
-flowchart LR
-    subgraph B["Bronze Layer"]
-        B1["customers.json.gz"]
-        B2["products.json.gz"]
-        B3["shopify/orders.json.gz"]
-        B4["sapo/orders.json.gz"]
-        B5["online_orders/orders.json.gz"]
-        B6["cart_tracking/cart_events.json.gz"]
-        B7["momo/transactions.json.gz"]
-        B8["paypal/transactions.json.gz"]
-        B9["zalopay/transactions.json.gz"]
-        B10["mercury/transactions.json.gz"]
-    end
-
-    subgraph S["Silver Layer"]
-        S1["dim_customers"]
-        S2["dim_products"]
-        S3["dim_locations"]
-        S4["dim_date"]
-        S5["fact_orders"]
-        S6["fact_order_items"]
-        S7["fact_payments"]
-        S8["fact_cart_events"]
-        S9["fact_bank_transactions"]
-    end
-
-    subgraph G["Gold Layer"]
-        G1["Updated dim_customers"]
-        G2["vw_customer_journey"]
-        G3["vw_customer_journey_sankey"]
-        G4["vw_cashflow_daily"]
-        G5["vw_payment_status"]
-    end
-
-    B1 --> S1
-    B2 --> S2
-    B3 --> S5
-    B3 --> S6
-    B4 --> S5
-    B4 --> S6
-    B5 --> S5
-    B5 --> S6
-    B6 --> S8
-    B7 --> S7
-    B8 --> S7
-    B9 --> S7
-    B10 --> S9
-    S5 --> G1
-    S5 --> G2
-    S8 --> G2
-    S8 --> G3
-    S5 --> G3
-    S5 --> G4
-    S7 --> G4
-    S9 --> G4
-    S5 --> G5
-    S7 --> G5
-```
+<img width="1086" height="1448" alt="image" src="https://github.com/user-attachments/assets/ca1030d9-3a2a-4e71-b1a3-103c7f9a5636" />
 
 Figure 2: Data Transformation Pipeline (Bronze → Silver → Gold)
 
