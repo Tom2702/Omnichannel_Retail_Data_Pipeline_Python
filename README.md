@@ -124,7 +124,6 @@ The BigQuery warehouse follows a star-schema style design.
 | --- | --- |
 | `dim_customers` | Customer profile, geography, aggregate metrics, and segment |
 | `dim_products` | Product catalog, pricing, category, brand, and stock fields |
-| `dim_locations` | Store / location metadata from operational systems |
 | `dim_date` | Calendar dimension with fiscal and reporting attributes |
 
 ### 6.2 Fact Tables
