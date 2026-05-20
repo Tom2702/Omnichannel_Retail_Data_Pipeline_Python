@@ -312,11 +312,4 @@ The warehouse and views support dashboards such as:
 - Power BI
 - dotenv-based configuration
 
----
 
-If you want, the next step I can help with is creating:
-
-- a shorter portfolio-style README
-- badges and screenshots for GitHub
-- a system architecture diagram image for the repo
-- a polished `.env.example` file to pair with this README
