@@ -11,14 +11,13 @@ This repository is designed for technical readers who want to understand how the
 - [3. Architecture and Design](#3-architecture-and-design)
 - [4. Data Sources](#4-data-sources)
 - [5. Core Features](#5-core-features)
-- [6. Warehouse Model](#6-warehouse-model)
+- [6. Data Model](#6-data-model)
 - [7. Analytics Views](#7-analytics-views)
-- [8. Repository Structure](#8-repository-structure)
-- [9. Getting Started](#9-getting-started)
-- [10. How to Run](#10-how-to-run)
-- [11. Validation and Testing](#11-validation-and-testing)
-- [12. Dashboard Outputs](#12-dashboard-outputs)
-- [13. Tech Stack](#13-tech-stack)
+- [8. Results in BigQuery](#8-results-in-bigquery)
+- [9. Repository Structure](#9-repository-structure)
+- [10. Getting Started](#10-getting-started)
+- [11. How to Run](#11-how-to-run)
+- [12. Tech Stack](#12-tech-stack)
 
 ## 1. Overview
 
@@ -162,7 +161,39 @@ The pipeline creates analysis-ready views directly in BigQuery:
 
 These views are intended to reduce modeling effort in Power BI and keep business logic centralized in SQL where possible.
 
-## 8. Repository Structure
+## 8. Results in BigQuery
+
+After a successful pipeline run, the curated outputs are available in the `anh27tuan02.Ancestry` BigQuery dataset.
+
+### 8.1 Base Tables
+
+| Table | Type | Snapshot Row Count |
+| --- | --- | ---: |
+| `dim_customers` | Dimension | 100,000 |
+| `dim_products` | Dimension | 1,300 |
+| `dim_locations` | Dimension | 50 |
+| `dim_date` | Dimension | 366 |
+| `fact_orders` | Fact | 700,000 |
+| `fact_order_items` | Fact | 2,089,696 |
+| `fact_payments` | Fact | 111,000 |
+| `fact_cart_events` | Fact | 3,010,000 |
+| `fact_bank_transactions` | Fact | 5,000 |
+
+### 8.2 Reporting Views
+
+| View | Purpose |
+| --- | --- |
+| `vw_customer_journey` | Customer-level touchpoint and purchase path analysis |
+| `vw_customer_journey_sankey` | Pre-shaped edge data for Sankey visualizations |
+| `vw_cashflow_daily` | Daily revenue, payment, and bank cashflow rollup |
+| `vw_payment_status` | Payment status, outstanding amount, and collection delay tracking |
+
+### 8.3 Notes
+
+- The snapshot above reflects the warehouse state verified on May 20, 2026.
+- Row counts may change when new raw files are added or when the pipeline is rerun.
+
+## 9. Repository Structure
 
 ```text
 .
@@ -211,9 +242,9 @@ These views are intended to reduce modeling effort in Power BI and keep business
 └── requirements.txt
 ```
 
-## 9. Getting Started
+## 10. Getting Started
 
-### 9.1 Prerequisites
+### 10.1 Prerequisites
 
 - Python 3
 - A Google Cloud project
@@ -222,13 +253,13 @@ These views are intended to reduce modeling effort in Power BI and keep business
   - BigQuery dataset permissions
   - a service account JSON key
 
-### 9.2 Install Dependencies
+### 10.2 Install Dependencies
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-### 9.3 Environment Variables
+### 10.3 Environment Variables
 
 Create a `.env` file in the project root:
 
@@ -250,15 +281,15 @@ Notes:
 - `PIPELINE_START_DATE` and `PIPELINE_END_DATE` are optional. If omitted, the pipeline can infer date coverage from fact data.
 - The default write disposition is `WRITE_TRUNCATE`.
 
-## 10. How to Run
+## 11. How to Run
 
-### 10.1 Run With `.env` Defaults
+### 11.1 Run With `.env` Defaults
 
 ```powershell
 python main.py
 ```
 
-### 10.2 Run With Explicit Parameters
+### 11.2 Run With Explicit Parameters
 
 ```powershell
 python main.py `
@@ -268,7 +299,7 @@ python main.py `
   --bucket-name your-source-bucket
 ```
 
-### 10.3 Optional Flags
+### 11.3 Optional Flags
 
 ```powershell
 python main.py `
@@ -280,7 +311,7 @@ python main.py `
 ```
 
 
-## 11. Tech Stack
+## 12. Tech Stack
 
 - Python
 - pandas
@@ -291,4 +322,3 @@ python main.py `
 - dotenv-based configuration
 
 ---
-
