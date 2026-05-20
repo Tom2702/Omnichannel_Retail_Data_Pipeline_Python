@@ -6,21 +6,21 @@ This repository is designed for technical readers who want to understand how the
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Business Context](#business-context)
-- [Architecture](#architecture)
-- [Data Sources](#data-sources)
-- [Core Features](#core-features)
-- [Warehouse Model](#warehouse-model)
-- [Analytics Views](#analytics-views)
-- [Repository Structure](#repository-structure)
-- [Getting Started](#getting-started)
-- [How to Run](#how-to-run)
-- [Validation and Testing](#validation-and-testing)
-- [Dashboard Outputs](#dashboard-outputs)
-- [Tech Stack](#tech-stack)
+- [1. Overview](#1-overview)
+- [2. Business Context](#2-business-context)
+- [3. Architecture and Design](#3-architecture-and-design)
+- [4. Data Sources](#4-data-sources)
+- [5. Core Features](#5-core-features)
+- [6. Warehouse Model](#6-warehouse-model)
+- [7. Analytics Views](#7-analytics-views)
+- [8. Repository Structure](#8-repository-structure)
+- [9. Getting Started](#9-getting-started)
+- [10. How to Run](#10-how-to-run)
+- [11. Validation and Testing](#11-validation-and-testing)
+- [12. Dashboard Outputs](#12-dashboard-outputs)
+- [13. Tech Stack](#13-tech-stack)
 
-## Overview
+## 1. Overview
 
 This project builds a centralized analytics layer for an omnichannel retail business operating across:
 
@@ -33,7 +33,7 @@ This project builds a centralized analytics layer for an omnichannel retail busi
 
 The pipeline extracts raw files from Google Cloud Storage, transforms them in pandas, loads curated fact and dimension tables into BigQuery, updates customer-level aggregates, and creates reusable SQL views for BI consumption.
 
-## Business Context
+## 2. Business Context
 
 Retail and payment data often live in disconnected systems. Orders, products, payment transactions, customer information, and user behavior events usually follow different schemas, naming conventions, and quality standards. That makes reporting slow, manual, and difficult to trust.
 
@@ -45,7 +45,7 @@ This project addresses that problem by creating a single analytics-ready warehou
 - How does cashflow evolve over time?
 - Which customers are active, loyal, VIP, or still unclassified?
 
-## Architecture
+## 3. Architecture and Design
 
 ```mermaid
 flowchart LR
@@ -58,7 +58,85 @@ flowchart LR
     G --> H["Power BI Dashboard"]
 ```
 
-### Pipeline Flow
+### 3.1 High-Level Architecture
+
+Figure 1: High-Level End-to-End Architecture
+
+Raw files from all sources land in Google Cloud Storage (GCS) as the single source of truth. A Python orchestrator coordinates the extract, transform, and load phases in strict dependency order. Cleaned and enriched data is then loaded into Google BigQuery as a star-schema warehouse, followed by post-load aggregate updates and analysis view creation for BI reporting.
+
+### 3.2 Medallion Architecture (ETL Flow)
+
+```mermaid
+flowchart LR
+    subgraph B["Bronze Layer"]
+        B1["customers.json.gz"]
+        B2["products.json.gz"]
+        B3["shopify/orders.json.gz"]
+        B4["sapo/orders.json.gz"]
+        B5["online_orders/orders.json.gz"]
+        B6["cart_tracking/cart_events.json.gz"]
+        B7["momo/transactions.json.gz"]
+        B8["paypal/transactions.json.gz"]
+        B9["zalopay/transactions.json.gz"]
+        B10["mercury/transactions.json.gz"]
+    end
+
+    subgraph S["Silver Layer"]
+        S1["dim_customers"]
+        S2["dim_products"]
+        S3["dim_locations"]
+        S4["dim_date"]
+        S5["fact_orders"]
+        S6["fact_order_items"]
+        S7["fact_payments"]
+        S8["fact_cart_events"]
+        S9["fact_bank_transactions"]
+    end
+
+    subgraph G["Gold Layer"]
+        G1["Updated dim_customers"]
+        G2["vw_customer_journey"]
+        G3["vw_customer_journey_sankey"]
+        G4["vw_cashflow_daily"]
+        G5["vw_payment_status"]
+    end
+
+    B1 --> S1
+    B2 --> S2
+    B3 --> S5
+    B3 --> S6
+    B4 --> S5
+    B4 --> S6
+    B5 --> S5
+    B5 --> S6
+    B6 --> S8
+    B7 --> S7
+    B8 --> S7
+    B9 --> S7
+    B10 --> S9
+    S5 --> G1
+    S5 --> G2
+    S8 --> G2
+    S8 --> G3
+    S5 --> G3
+    S5 --> G4
+    S7 --> G4
+    S9 --> G4
+    S5 --> G5
+    S7 --> G5
+```
+
+Figure 2: Data Transformation Pipeline (Bronze → Silver → Gold)
+
+Data flows through three layers:
+
+| Layer | Location | Description |
+| --- | --- | --- |
+| Bronze (Raw) | Google Cloud Storage | Compressed `.json.gz` source files are ingested and stored as-is. No transformations are applied at this stage. |
+| Silver (Cleaned) | In-memory pandas processing | Schemas are standardized, data types are fixed, surrogate keys are generated, nested structures are flattened, and data quality checks are applied. |
+| Gold (Serving) | Google BigQuery | Dimension and fact tables are loaded into the warehouse, customer aggregates are updated, and analytical SQL views are created for reporting. |
+
+### 3.3 Pipeline Flow
 
 1. Extract raw data from GCS using source-specific extractor classes.
 2. Standardize schemas, cast types, generate surrogate keys, and handle missing values.
@@ -67,11 +145,11 @@ flowchart LR
 5. Update customer lifetime metrics and segmentation after fact tables are loaded.
 6. Create reusable analytical views for BI dashboards.
 
-## Data Sources
+## 4. Data Sources
 
 The pipeline integrates multiple source families:
 
-### Sales and Commerce
+### 4.1 Sales and Commerce
 
 - Shopify orders
 - Sapo orders and locations
@@ -79,7 +157,7 @@ The pipeline integrates multiple source families:
 - Product catalog
 - Customer master data
 
-### Payments and Banking
+### 4.2 Payments and Banking
 
 - MoMo
 - ZaloPay
@@ -87,12 +165,12 @@ The pipeline integrates multiple source families:
 - Odoo / Sapo payment exports
 - Mercury bank transaction logs
 
-### Customer Behavior
+### 4.3 Customer Behavior
 
 - cart and browsing event tracking
 - session-level events such as `view_item`, `add_to_cart`, `begin_checkout`, and `purchase`
 
-## Core Features
+## 5. Core Features
 
 - Modular OOP pipeline architecture with dedicated extractors, transformers, loader, and orchestrator
 - Multi-source schema harmonization across retail, payment, and tracking systems
@@ -104,11 +182,11 @@ The pipeline integrates multiple source families:
 - Customer segmentation logic maintained directly in the warehouse
 - Analysis-ready SQL views for journey, sankey flow, cashflow, and payment status reporting
 
-## Warehouse Model
+## 6. Warehouse Model
 
 The BigQuery warehouse follows a star-schema style design.
 
-### Dimension Tables
+### 6.1 Dimension Tables
 
 | Table | Description |
 | --- | --- |
@@ -117,7 +195,7 @@ The BigQuery warehouse follows a star-schema style design.
 | `dim_locations` | Store / location metadata from operational systems |
 | `dim_date` | Calendar dimension with fiscal and reporting attributes |
 
-### Fact Tables
+### 6.2 Fact Tables
 
 | Table | Description |
 | --- | --- |
@@ -127,7 +205,7 @@ The BigQuery warehouse follows a star-schema style design.
 | `fact_cart_events` | Customer behavior and funnel tracking events |
 | `fact_bank_transactions` | Bank movements by account and transaction type |
 
-### Customer Segmentation Logic
+### 6.3 Customer Segmentation Logic
 
 After each run, the pipeline updates customer-level metrics in `dim_customers` and reclassifies segments using warehouse-side SQL:
 
@@ -136,7 +214,7 @@ After each run, the pipeline updates customer-level metrics in `dim_customers` a
 - `active`: `total_orders >= 1`
 - `unknown`: no qualifying purchase history or missing segment input
 
-## Analytics Views
+## 7. Analytics Views
 
 The pipeline creates analysis-ready views directly in BigQuery:
 
@@ -149,7 +227,7 @@ The pipeline creates analysis-ready views directly in BigQuery:
 
 These views are intended to reduce modeling effort in Power BI and keep business logic centralized in SQL where possible.
 
-## Repository Structure
+## 8. Repository Structure
 
 ```text
 .
@@ -199,9 +277,9 @@ These views are intended to reduce modeling effort in Power BI and keep business
 └── requirements.txt
 ```
 
-## Getting Started
+## 9. Getting Started
 
-### Prerequisites
+### 9.1 Prerequisites
 
 - Python 3
 - A Google Cloud project
@@ -210,13 +288,13 @@ These views are intended to reduce modeling effort in Power BI and keep business
   - BigQuery dataset permissions
   - a service account JSON key
 
-### Install Dependencies
+### 9.2 Install Dependencies
 
 ```powershell
 python -m pip install -r requirements.txt
 ```
 
-### Environment Variables
+### 9.3 Environment Variables
 
 Create a `.env` file in the project root:
 
@@ -238,15 +316,15 @@ Notes:
 - `PIPELINE_START_DATE` and `PIPELINE_END_DATE` are optional. If omitted, the pipeline can infer date coverage from fact data.
 - The default write disposition is `WRITE_TRUNCATE`.
 
-## How to Run
+## 10. How to Run
 
-### Run With `.env` Defaults
+### 10.1 Run With `.env` Defaults
 
 ```powershell
 python main.py
 ```
 
-### Run With Explicit Parameters
+### 10.2 Run With Explicit Parameters
 
 ```powershell
 python main.py `
@@ -256,7 +334,7 @@ python main.py `
   --bucket-name your-source-bucket
 ```
 
-### Optional Flags
+### 10.3 Optional Flags
 
 ```powershell
 python main.py `
@@ -267,15 +345,15 @@ python main.py `
   --write-disposition WRITE_TRUNCATE
 ```
 
-## Validation and Testing
+## 11. Validation and Testing
 
-### Check Loaded Tables
+### 11.1 Check Loaded Tables
 
 ```powershell
 python check_bigquery_tables.py --dataset-id Ancestry
 ```
 
-### Run the Test Suite
+### 11.2 Run the Test Suite
 
 ```powershell
 python -m unittest
@@ -289,7 +367,7 @@ The repository includes tests for:
 - pipeline orchestration
 - integration-level table preparation
 
-## Dashboard Outputs
+## 12. Dashboard Outputs
 
 The repository includes a Power BI report file: `Project.pbix`
 
@@ -302,7 +380,7 @@ The warehouse and views support dashboards such as:
 - receivables and collection monitoring
 - cashflow and financial analytics
 
-## Tech Stack
+## 13. Tech Stack
 
 - Python
 - pandas
@@ -312,4 +390,11 @@ The warehouse and views support dashboards such as:
 - Power BI
 - dotenv-based configuration
 
+---
 
+If you want, the next step I can help with is creating:
+
+- a shorter portfolio-style README
+- badges and screenshots for GitHub
+- a system architecture diagram image for the repo
+- a polished `.env.example` file to pair with this README
