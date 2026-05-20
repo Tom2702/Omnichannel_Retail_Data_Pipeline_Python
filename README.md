@@ -153,19 +153,50 @@ These views are intended to reduce modeling effort in Power BI and keep business
 
 ```text
 .
-├── config/                  # service account config and local config assets
-├── extractors/              # source-specific GCS extractors
-├── loaders/                 # BigQuery loading utilities
-├── logs/                    # pipeline execution logs
-├── orchestration/           # pipeline orchestration and SQL view builders
-├── tests/                   # unit and integration tests
-├── transformers/            # dimension and fact transformation logic
-├── utils/                   # shared helpers and logging
-├── check_bigquery_tables.py # quick dataset/table validation script
-├── main.py                  # CLI entry point
-├── pipeline_orchestrator.py # root import shim
-├── Project.pbix             # Power BI report file
-└── requirements.txt         # Python dependencies
+├── config/
+├── extractors/
+│   ├── base_extractor.py
+│   ├── customers_extractor.py
+│   ├── online_orders_extractor.py
+│   ├── payment_extractor.py
+│   ├── products_extractor.py
+│   ├── sapo_extractor.py
+│   ├── shopify_extractor.py
+│   ├── tracking_extractor.py
+│   └── __init__.py
+├── loaders/
+│   ├── bigquery_loader.py
+│   └── __init__.py
+├── logs/
+├── orchestration/
+│   ├── pipeline_orchestrator.py
+│   └── __init__.py
+├── tests/
+│   ├── fixtures/
+│   ├── test_base_transformer.py
+│   ├── test_bigquery_loader.py
+│   ├── test_customers_extractor.py
+│   ├── test_dimension_transformer.py
+│   ├── test_fact_transformer.py
+│   ├── test_payment_extractor.py
+│   ├── test_pipeline_integration.py
+│   ├── test_pipeline_orchestrator.py
+│   ├── test_sapo_extractor.py
+│   └── test_shopify_extractor.py
+├── transformers/
+│   ├── base_transformer.py
+│   ├── dimension_transformer.py
+│   ├── fact_transformer.py
+│   └── __init__.py
+├── utils/
+│   ├── gcs_helper.py
+│   ├── logger.py
+│   └── __init__.py
+├── .env
+├── main.py
+├── Project.pbix
+├── README.md
+└── requirements.txt
 ```
 
 ## Getting Started
