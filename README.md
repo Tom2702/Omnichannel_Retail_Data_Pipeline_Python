@@ -1,6 +1,6 @@
 # Omnichannel Retail Data Pipeline
 
-An end-to-end Python ELT project that consolidates omnichannel retail, payment, and customer-behavior data into a Google BigQuery warehouse for downstream analytics and Power BI reporting.
+An end-to-end Python ELT project that consolidates omnichannel retail, payment, and customer-behavior data into a Google BigQuery warehouse for downstream analytics.
 
 This repository is designed for technical readers who want to understand how the pipeline ingests raw data from multiple operational systems, standardizes inconsistent schemas, applies data quality checks, loads analytics-ready tables, and publishes derived views for customer journey, payment, and cashflow analysis.
 
